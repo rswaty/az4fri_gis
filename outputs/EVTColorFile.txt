@@ -1,0 +1,10 @@
+7016,121,255,94,255,Colorado Plateau Pinyon-Juniper Woodland
+7023,0,237,0,255,Madrean Encinal
+7024,0,237,0,255,Madrean Lower Montane Pine-Oak Forest and Woodland
+7025,121,255,94,255,Madrean Pinyon-Juniper Woodland
+7054,214,255,181,255,Southern Rocky Mountain Ponderosa Pine Woodland
+7107,245,175,54,255,Rocky Mountain Gambel Oak-Mixed Montane Shrubland
+7127,130,101,72,255,Inter-Mountain Basins Semi-Desert Shrub-Steppe
+7135,255,200,125,255,Inter-Mountain Basins Semi-Desert Grassland
+7146,171,145,106,255,Southern Rocky Mountain Montane-Subalpine Grassland
+7299,1,1,1,255,Developed-Roads

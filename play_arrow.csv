@@ -1,0 +1,8 @@
+class,ref_percent,scl2020,scl2022,change,sign_change
+A,10,5,7,2,TRUE
+B,20,15,18,3,TRUE
+C,10,20,16,-4,FALSE
+D,30,20,20,0,TRUE
+E,30,20,30,10,TRUE
+UN,0,10,5,-5,FALSE
+UE,0,10,4,-6,FALSE

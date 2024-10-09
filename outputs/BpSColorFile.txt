@@ -1,0 +1,23 @@
+1210,185,174,211,255,Inter-Mountain Basins Semi-Desert Grassland
+1140,185,174,211,255,Inter-Mountain Basins Semi-Desert Grassland
+1209,194,158,215,255,Inter-Mountain Basins Semi-Desert Shrub-Steppe
+1139,194,158,215,255,Inter-Mountain Basins Semi-Desert Shrub-Steppe
+1184,0,167,132,255,Madrean Encinal
+1115,0,167,132,255,Madrean Encinal
+1185,167,189,30,255,Madrean Lower Montane Pine-Oak Forest and Woodland
+1116,167,189,30,255,Madrean Lower Montane Pine-Oak Forest and Woodland
+1186,160,106,31,255,Madrean Pinyon-Juniper Woodland
+1117,160,106,31,255,Madrean Pinyon-Juniper Woodland
+1202,173,250,211,255,Mogollon Chaparral
+1131,173,250,211,255,Mogollon Chaparral
+1203,115,255,223,255,Rocky Mountain Gambel Oak-Mixed Montane Shrubland
+1132,115,255,223,255,Rocky Mountain Gambel Oak-Mixed Montane Shrubland
+1214,123,124,93,255,Rocky Mountain Montane Riparian Systems
+1143,123,124,93,255,Rocky Mountain Montane Riparian Systems
+1188,190,210,255,255,Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland
+1118,190,210,255,255,Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland
+1211,167,205,178,255,Southern Rocky Mountain Montane-Subalpine Grassland
+1207,255,85,0,255,Southern Rocky Mountain Ponderosa Pine Savanna
+1135,255,85,0,255,Southern Rocky Mountain Ponderosa Pine Savanna
+1190,168,56,0,255,Southern Rocky Mountain Ponderosa Pine Woodland
+1120,168,56,0,255,Southern Rocky Mountain Ponderosa Pine Woodland

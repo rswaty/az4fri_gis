@@ -1,0 +1,449 @@
+"","TransitionGroupID","Model_Code","annual_probability","BpS_Name","...1","BLUE","ACRES","REL_PERCENT","annual_dist_acres"
+"1","All Fire","10110_15",0.0087156,"Rocky Mountain Aspen Forest and Woodland",52,0.450980392,250,0,2.1789
+"2","All Fire","10160_15_28",0.0080608,"Colorado Plateau Pinyon-Juniper Woodland",15,0.4,12555,0.6,101.203344
+"3","All Fire","10160_16_23_24_25",0.0078524,"Colorado Plateau Pinyon-Juniper Woodland",25,0.4,2137,0.1,16.7805788
+"4","All Fire","10190_15",0.0063906,"Great Basin Pinyon-Juniper Woodland",53,0,40,0,0.255624
+"5","All Fire","10230_14_15_24_25",0.0431672,"Madrean Encinal",6,0.517647059,61191,2.8,2641.4441352
+"6","All Fire","10230_14_15_24_25",0.0431672,"Madrean Encinal",35,0.517647059,19,0,0.8201768
+"7","All Fire","10240_14_15_24",0.0423804,"Madrean Lower Montane Pine-Oak Forest and Woodland",3,0.117647059,141351,6.5,5990.5119204
+"8","All Fire","10240_14_15_24",0.0423804,"Madrean Lower Montane Pine-Oak Forest and Woodland",36,0.117647059,88,0,3.7294752
+"9","All Fire","10250_14_15_24_25_26",0.0215966,"Madrean Pinyon-Juniper Woodland",10,0.121568627,31453,1.4,679.2778598
+"10","All Fire","10250_14_15_24_25_26",0.0215966,"Madrean Pinyon-Juniper Woodland",37,0.121568627,66,0,1.4253756
+"11","All Fire","10260_15",0.0977646,"Madrean Upper Montane Conifer-Oak Forest and Woodland",54,0.223529412,50,0,4.88823
+"12","All Fire","10510_15_16_17_22_23_24_25",0.0934938,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",12,1,21726,1,2031.2462988
+"13","All Fire","10510_15_16_17_22_23_24_25",0.0934938,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",38,1,26,0,2.4308388
+"14","All Fire","10520_15",0.029845,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",16,0.901960784,10168,0.5,303.46396
+"15","All Fire","10520_16_23_24",0.0301954,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",39,0.901960784,0,0,0
+"16","All Fire","10540_15_25",0.1084062,"Southern Rocky Mountain Ponderosa Pine Woodland",1,0,1277151,58.4,138451.0867362
+"17","All Fire","10540_16_23_24",0.0586996,"Southern Rocky Mountain Ponderosa Pine Woodland",9,0,30279,1.4,1777.3651884
+"18","All Fire","10550_15_28",0.0072968,"Rocky Mountain Subalpine Dry-Mesic Spruce-Fir Forest and Woodland",28,0.745098039,1924,0.1,14.0390432
+"19","All Fire","10560_15_28",0.0072868,"Rocky Mountain Subalpine Mesic-Wet Spruce-Fir Forest and Woodland",55,0,6,0,0.0437208
+"20","All Fire","10610_15_25",0.0810248,"Inter-Mountain Basins Aspen-Mixed Conifer Forest and Woodland",13,0,19740,0.9,1599.429552
+"21","All Fire","10640_15_16_17_23_24_27_28",0.012737,"Colorado Plateau Mixed Low Sagebrush Shrubland",40,0.843137255,300,0,3.8211
+"22","All Fire","10770_15",0.002871,"Chihuahuan Succulent Desert Scrub",56,0.411764706,3,0,0.008613
+"23","All Fire","10780_16_23_24_25",0.013147,"Colorado Plateau Blackbrush-Mormon-tea Shrubland",41,0.811764706,5,0,0.065735
+"24","All Fire","10804_6_12_15_16_17_18_23_24_25",0.0084418,"Inter-Mountain Basins Big Sagebrush Shrubland - Upland",18,0.909803922,7698,0.4,64.9849764
+"25","All Fire","10804_6_12_15_16_17_18_23_24_25",0.0084418,"Inter-Mountain Basins Big Sagebrush Shrubland - Upland",30,0.909803922,1151,0.1,9.7165118
+"26","All Fire","10810_15_16_23_24_28",0.001596,"Inter-Mountain Basins Mixed Salt Desert Scrub",26,0.478431373,1560,0.1,2.48976
+"27","All Fire","10810_15_16_23_24_28",0.001596,"Inter-Mountain Basins Mixed Salt Desert Scrub",57,0.478431373,127,0,0.202692
+"28","All Fire","10820_12_15_16_17_23_24",0.0012436,"Mojave Mid-Elevation Mixed Desert Scrub",33,0.28627451,361,0,0.4489396
+"29","All Fire","10820_12_15_16_17_23_24",0.0012436,"Mojave Mid-Elevation Mixed Desert Scrub",58,0.28627451,103,0,0.1280908
+"30","All Fire","10910_15",0.0028784,"Sonoran Mid-Elevation Desert Scrub",59,0.388235294,54,0,0.1554336
+"31","All Fire","10930_13_15_16_23_24_28",0.0046186,"Southern Colorado Plateau Sand Shrubland",42,0.094117647,18,0,0.0831348
+"32","All Fire","11000_15",0.0031294,"Chihuahuan Mixed Desert and Thorn Scrub",60,0.478431373,1,0,0.0031294
+"33","All Fire","11020_13_15_16_23_24",0.0154808,"Colorado Plateau Pinyon-Juniper Shrubland",43,0,4,0,0.0619232
+"34","All Fire","11020_13_15_16_23_24",0.0154808,"Colorado Plateau Pinyon-Juniper Shrubland",61,0,875,0,13.5457
+"35","All Fire","11040_15",0.013108,"Mogollon Chaparral",11,0.82745098,27473,1.3,360.116084
+"36","All Fire","11040_23_24",0.0237914,"Mogollon Chaparral",27,0.82745098,2187,0.1,52.0317918
+"37","All Fire","11070_15",0.0260746,"Rocky Mountain Gambel Oak-Mixed Montane Shrubland",8,0.874509804,36228,1.7,944.6306088
+"38","All Fire","11070_23_24",0.025984,"Rocky Mountain Gambel Oak-Mixed Montane Shrubland",44,0.874509804,378,0,9.821952
+"39","All Fire","11090_15_25",0.00095,"Sonoran Paloverde-Mixed Cacti Desert Scrub",22,0.960784314,7055,0.3,6.70225
+"40","All Fire","11150_15_16_23_24",0.0154166,"Inter-Mountain Basins Juniper Savanna",45,0.266666667,258,0,3.9774828
+"41","All Fire","11150_15_16_23_24",0.0154166,"Inter-Mountain Basins Juniper Savanna",62,0.266666667,105,0,1.618743
+"42","All Fire","11160_15_25",0.0216964,"Madrean Juniper Savanna",63,0.560784314,939,0,20.3729196
+"43","All Fire","11160_24",0.021955,"Madrean Juniper Savanna",46,0.560784314,4,0,0.08782
+"44","All Fire","11170_13_15_28",0.0922292,"Southern Rocky Mountain Ponderosa Pine Savanna",2,0,185004,8.5,17062.7709168
+"45","All Fire","11170_16_23_24",0.1244826,"Southern Rocky Mountain Ponderosa Pine Savanna",23,0,3803,0.2,473.4073278
+"46","All Fire","11210_15",0.1262176,"Apacherian-Chihuahuan Semi-Desert Grassland and Steppe",17,0.847058824,7989,0.4,1008.3524064
+"47","All Fire","11210_24",0.1238776,"Apacherian-Chihuahuan Semi-Desert Grassland and Steppe",47,0.847058824,87,0,10.7773512
+"48","All Fire","11250_6_12_13_15_16_17_18_23_24_25_28",0.0086132,"Inter-Mountain Basins Big Sagebrush Steppe",31,0.874509804,180,0,1.550376
+"49","All Fire","11270_15",0.0084802,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",5,0.843137255,72451,3.3,614.3989702
+"50","All Fire","11270_16_23_24_25",0.0094344,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",21,0.843137255,7269,0.3,68.5786536
+"51","All Fire","11350_15_28",0.0400448,"Inter-Mountain Basins Semi-Desert Grassland",14,0.82745098,16463,0.8,659.2575424
+"52","All Fire","11350_16_23_24",0.0399014,"Inter-Mountain Basins Semi-Desert Grassland",24,0.82745098,3901,0.2,155.6553614
+"53","All Fire","11450_22_24_28",0.0308498,"Rocky Mountain Subalpine-Montane Mesic Meadow",48,1,43,0,1.3265414
+"54","All Fire","11460_15_16_23_24_25_28",0.1000288,"Southern Rocky Mountain Montane-Subalpine Grassland",7,0.698039216,50568,2.3,5058.2563584
+"55","All Fire","11530_16_23_24_25_27",0.0047642,"Inter-Mountain Basins Greasewood Flat",49,0.882352941,8,0,0.0381136
+"56","All Fire","11550_15",0.013255,"North American Warm Desert Riparian Systems",64,0.458823529,40,0,0.5302
+"57","All Fire","11552_13_14_15",0.001372,"North American Warm Desert Riparian Systems - Stringers",29,0.458823529,1642,0.1,2.252824
+"58","All Fire","11590_15",0.151441,"Rocky Mountain Montane Riparian Systems",4,0.364705882,126933,5.8,19222.860453
+"59","All Fire","11590_16_23_24_26",0.0166702,"Rocky Mountain Montane Riparian Systems",50,0.364705882,589,0,9.8187478
+"60","All Fire","11600_15_28",0.0163066,"Rocky Mountain Subalpine/Upper Montane Riparian Systems",65,0.654901961,584,0,9.5230544
+"61","All Transitions","10110_15",0.0266674,"Rocky Mountain Aspen Forest and Woodland",52,0.450980392,250,0,6.66685
+"62","All Transitions","10160_15_28",0.0266456,"Colorado Plateau Pinyon-Juniper Woodland",15,0.4,12555,0.6,334.535508
+"63","All Transitions","10160_16_23_24_25",0.0246766,"Colorado Plateau Pinyon-Juniper Woodland",25,0.4,2137,0.1,52.7338942
+"64","All Transitions","10190_15",0.0092816,"Great Basin Pinyon-Juniper Woodland",53,0,40,0,0.371264
+"65","All Transitions","10230_14_15_24_25",0.0542544,"Madrean Encinal",6,0.517647059,61191,2.8,3319.8809904
+"66","All Transitions","10230_14_15_24_25",0.0542544,"Madrean Encinal",35,0.517647059,19,0,1.0308336
+"67","All Transitions","10240_14_15_24",0.053263,"Madrean Lower Montane Pine-Oak Forest and Woodland",3,0.117647059,141351,6.5,7528.778313
+"68","All Transitions","10240_14_15_24",0.053263,"Madrean Lower Montane Pine-Oak Forest and Woodland",36,0.117647059,88,0,4.687144
+"69","All Transitions","10250_14_15_24_25_26",0.0272986,"Madrean Pinyon-Juniper Woodland",10,0.121568627,31453,1.4,858.6228658
+"70","All Transitions","10250_14_15_24_25_26",0.0272986,"Madrean Pinyon-Juniper Woodland",37,0.121568627,66,0,1.8017076
+"71","All Transitions","10260_15",0.1084506,"Madrean Upper Montane Conifer-Oak Forest and Woodland",54,0.223529412,50,0,5.42253
+"72","All Transitions","10510_15_16_17_22_23_24_25",0.1043282,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",12,1,21726,1,2266.6344732
+"73","All Transitions","10510_15_16_17_22_23_24_25",0.1043282,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",38,1,26,0,2.7125332
+"74","All Transitions","10520_15",0.0565604,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",16,0.901960784,10168,0.5,575.1061472
+"75","All Transitions","10520_16_23_24",0.0568552,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",39,0.901960784,0,0,0
+"76","All Transitions","10540_15_25",0.1109472,"Southern Rocky Mountain Ponderosa Pine Woodland",1,0,1277151,58.4,141696.3274272
+"77","All Transitions","10540_16_23_24",0.0693576,"Southern Rocky Mountain Ponderosa Pine Woodland",9,0,30279,1.4,2100.0787704
+"78","All Transitions","10550_15_28",0.016136,"Rocky Mountain Subalpine Dry-Mesic Spruce-Fir Forest and Woodland",28,0.745098039,1924,0.1,31.045664
+"79","All Transitions","10560_15_28",0.0159924,"Rocky Mountain Subalpine Mesic-Wet Spruce-Fir Forest and Woodland",55,0,6,0,0.0959544
+"80","All Transitions","10610_15_25",0.0826078,"Inter-Mountain Basins Aspen-Mixed Conifer Forest and Woodland",13,0,19740,0.9,1630.677972
+"81","All Transitions","10640_15_16_17_23_24_27_28",0.0654792,"Colorado Plateau Mixed Low Sagebrush Shrubland",40,0.843137255,300,0,19.64376
+"82","All Transitions","10770_15",0.0071574,"Chihuahuan Succulent Desert Scrub",56,0.411764706,3,0,0.0214722
+"83","All Transitions","10780_16_23_24_25",0.0412126,"Colorado Plateau Blackbrush-Mormon-tea Shrubland",41,0.811764706,5,0,0.206063
+"84","All Transitions","10804_6_12_15_16_17_18_23_24_25",0.0143996,"Inter-Mountain Basins Big Sagebrush Shrubland - Upland",18,0.909803922,7698,0.4,110.8481208
+"85","All Transitions","10804_6_12_15_16_17_18_23_24_25",0.0143996,"Inter-Mountain Basins Big Sagebrush Shrubland - Upland",30,0.909803922,1151,0.1,16.5739396
+"86","All Transitions","10810_15_16_23_24_28",0.0630768,"Inter-Mountain Basins Mixed Salt Desert Scrub",26,0.478431373,1560,0.1,98.399808
+"87","All Transitions","10810_15_16_23_24_28",0.0630768,"Inter-Mountain Basins Mixed Salt Desert Scrub",57,0.478431373,127,0,8.0107536
+"88","All Transitions","10820_12_15_16_17_23_24",0.0012436,"Mojave Mid-Elevation Mixed Desert Scrub",33,0.28627451,361,0,0.4489396
+"89","All Transitions","10820_12_15_16_17_23_24",0.0012436,"Mojave Mid-Elevation Mixed Desert Scrub",58,0.28627451,103,0,0.1280908
+"90","All Transitions","10910_15",0.0116798,"Sonoran Mid-Elevation Desert Scrub",59,0.388235294,54,0,0.6307092
+"91","All Transitions","10930_13_15_16_23_24_28",0.012289,"Southern Colorado Plateau Sand Shrubland",42,0.094117647,18,0,0.221202
+"92","All Transitions","11000_15",0.0143264,"Chihuahuan Mixed Desert and Thorn Scrub",60,0.478431373,1,0,0.0143264
+"93","All Transitions","11020_13_15_16_23_24",0.0154808,"Colorado Plateau Pinyon-Juniper Shrubland",43,0,4,0,0.0619232
+"94","All Transitions","11020_13_15_16_23_24",0.0154808,"Colorado Plateau Pinyon-Juniper Shrubland",61,0,875,0,13.5457
+"95","All Transitions","11040_15",0.013108,"Mogollon Chaparral",11,0.82745098,27473,1.3,360.116084
+"96","All Transitions","11040_23_24",0.0416284,"Mogollon Chaparral",27,0.82745098,2187,0.1,91.0413108
+"97","All Transitions","11070_15",0.0260746,"Rocky Mountain Gambel Oak-Mixed Montane Shrubland",8,0.874509804,36228,1.7,944.6306088
+"98","All Transitions","11070_23_24",0.025984,"Rocky Mountain Gambel Oak-Mixed Montane Shrubland",44,0.874509804,378,0,9.821952
+"99","All Transitions","11090_15_25",0.0028654,"Sonoran Paloverde-Mixed Cacti Desert Scrub",22,0.960784314,7055,0.3,20.215397
+"100","All Transitions","11150_15_16_23_24",0.0154166,"Inter-Mountain Basins Juniper Savanna",45,0.266666667,258,0,3.9774828
+"101","All Transitions","11150_15_16_23_24",0.0154166,"Inter-Mountain Basins Juniper Savanna",62,0.266666667,105,0,1.618743
+"102","All Transitions","11160_15_25",0.0274268,"Madrean Juniper Savanna",63,0.560784314,939,0,25.7537652
+"103","All Transitions","11160_24",0.0269784,"Madrean Juniper Savanna",46,0.560784314,4,0,0.1079136
+"104","All Transitions","11170_13_15_28",0.0951214,"Southern Rocky Mountain Ponderosa Pine Savanna",2,0,185004,8.5,17597.8394856
+"105","All Transitions","11170_16_23_24",0.1266146,"Southern Rocky Mountain Ponderosa Pine Savanna",23,0,3803,0.2,481.5153238
+"106","All Transitions","11210_15",0.1262176,"Apacherian-Chihuahuan Semi-Desert Grassland and Steppe",17,0.847058824,7989,0.4,1008.3524064
+"107","All Transitions","11210_24",0.1238776,"Apacherian-Chihuahuan Semi-Desert Grassland and Steppe",47,0.847058824,87,0,10.7773512
+"108","All Transitions","11250_6_12_13_15_16_17_18_23_24_25_28",0.0315482,"Inter-Mountain Basins Big Sagebrush Steppe",31,0.874509804,180,0,5.678676
+"109","All Transitions","11270_15",0.1252672,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",5,0.843137255,72451,3.3,9075.7339072
+"110","All Transitions","11270_16_23_24_25",0.1241012,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",21,0.843137255,7269,0.3,902.0916228
+"111","All Transitions","11350_15_28",0.0619654,"Inter-Mountain Basins Semi-Desert Grassland",14,0.82745098,16463,0.8,1020.1363802
+"112","All Transitions","11350_16_23_24",0.0599554,"Inter-Mountain Basins Semi-Desert Grassland",24,0.82745098,3901,0.2,233.8860154
+"113","All Transitions","11450_22_24_28",0.0308498,"Rocky Mountain Subalpine-Montane Mesic Meadow",48,1,43,0,1.3265414
+"114","All Transitions","11460_15_16_23_24_25_28",0.1482314,"Southern Rocky Mountain Montane-Subalpine Grassland",7,0.698039216,50568,2.3,7495.7654352
+"115","All Transitions","11530_16_23_24_25_27",0.0183694,"Inter-Mountain Basins Greasewood Flat",49,0.882352941,8,0,0.1469552
+"116","All Transitions","11550_15",0.0821788,"North American Warm Desert Riparian Systems",64,0.458823529,40,0,3.287152
+"117","All Transitions","11552_13_14_15",0.1210242,"North American Warm Desert Riparian Systems - Stringers",29,0.458823529,1642,0.1,198.7217364
+"118","All Transitions","11590_15",0.3580462,"Rocky Mountain Montane Riparian Systems",4,0.364705882,126933,5.8,45447.8783046
+"119","All Transitions","11590_16_23_24_26",0.4149928,"Rocky Mountain Montane Riparian Systems",50,0.364705882,589,0,244.4307592
+"120","All Transitions","11600_15_28",0.4070216,"Rocky Mountain Subalpine/Upper Montane Riparian Systems",65,0.654901961,584,0,237.7006144
+"121","Alternative Succession","10160_15_28",0.0076906,"Colorado Plateau Pinyon-Juniper Woodland",15,0.4,12555,0.6,96.555483
+"122","Alternative Succession","10160_16_23_24_25",0.007569,"Colorado Plateau Pinyon-Juniper Woodland",25,0.4,2137,0.1,16.174953
+"123","Alternative Succession","10230_14_15_24_25",0.0062724,"Madrean Encinal",6,0.517647059,61191,2.8,383.8144284
+"124","Alternative Succession","10230_14_15_24_25",0.0062724,"Madrean Encinal",35,0.517647059,19,0,0.1191756
+"125","Alternative Succession","10240_14_15_24",0.0061624,"Madrean Lower Montane Pine-Oak Forest and Woodland",3,0.117647059,141351,6.5,871.0614024
+"126","Alternative Succession","10240_14_15_24",0.0061624,"Madrean Lower Montane Pine-Oak Forest and Woodland",36,0.117647059,88,0,0.5422912
+"127","Alternative Succession","10260_15",0.0001018,"Madrean Upper Montane Conifer-Oak Forest and Woodland",54,0.223529412,50,0,0.00509
+"128","Alternative Succession","10510_15_16_17_22_23_24_25",0.0002354,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",12,1,21726,1,5.1143004
+"129","Alternative Succession","10510_15_16_17_22_23_24_25",0.0002354,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",38,1,26,0,0.0061204
+"130","Alternative Succession","10520_15",0.0111678,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",16,0.901960784,10168,0.5,113.5541904
+"131","Alternative Succession","10520_16_23_24",0.0110482,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",39,0.901960784,0,0,0
+"132","Alternative Succession","10540_15_25",0.0020834,"Southern Rocky Mountain Ponderosa Pine Woodland",1,0,1277151,58.4,2660.8163934
+"133","Alternative Succession","10540_16_23_24",0.0077474,"Southern Rocky Mountain Ponderosa Pine Woodland",9,0,30279,1.4,234.5835246
+"134","Alternative Succession","10550_15_28",0.0048118,"Rocky Mountain Subalpine Dry-Mesic Spruce-Fir Forest and Woodland",28,0.745098039,1924,0.1,9.2579032
+"135","Alternative Succession","10560_15_28",0.00478,"Rocky Mountain Subalpine Mesic-Wet Spruce-Fir Forest and Woodland",55,0,6,0,0.02868
+"136","Alternative Succession","10610_15_25",0.0012578,"Inter-Mountain Basins Aspen-Mixed Conifer Forest and Woodland",13,0,19740,0.9,24.828972
+"137","Alternative Succession","10640_15_16_17_23_24_27_28",0.002557,"Colorado Plateau Mixed Low Sagebrush Shrubland",40,0.843137255,300,0,0.7671
+"138","Alternative Succession","10780_16_23_24_25",0.014699,"Colorado Plateau Blackbrush-Mormon-tea Shrubland",41,0.811764706,5,0,0.073495
+"139","Alternative Succession","10810_15_16_23_24_28",0.0067586,"Inter-Mountain Basins Mixed Salt Desert Scrub",26,0.478431373,1560,0.1,10.543416
+"140","Alternative Succession","10810_15_16_23_24_28",0.0067586,"Inter-Mountain Basins Mixed Salt Desert Scrub",57,0.478431373,127,0,0.8583422
+"141","Alternative Succession","11040_23_24",0.0037492,"Mogollon Chaparral",27,0.82745098,2187,0.1,8.1995004
+"142","Alternative Succession","11170_13_15_28",0.0028922,"Southern Rocky Mountain Ponderosa Pine Savanna",2,0,185004,8.5,535.0685688
+"143","Alternative Succession","11170_16_23_24",0.0013274,"Southern Rocky Mountain Ponderosa Pine Savanna",23,0,3803,0.2,5.0481022
+"144","Alternative Succession","11270_15",0.0021546,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",5,0.843137255,72451,3.3,156.1029246
+"145","Alternative Succession","11270_16_23_24_25",0.0019652,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",21,0.843137255,7269,0.3,14.2850388
+"146","Competition or Maintenance","10160_15_28",0.0034882,"Colorado Plateau Pinyon-Juniper Woodland",15,0.4,12555,0.6,43.794351
+"147","Competition or Maintenance","10160_16_23_24_25",0.0037272,"Colorado Plateau Pinyon-Juniper Woodland",25,0.4,2137,0.1,7.9650264
+"148","Competition or Maintenance","10260_15",0.0014262,"Madrean Upper Montane Conifer-Oak Forest and Woodland",54,0.223529412,50,0,0.07131
+"149","Competition or Maintenance","10510_15_16_17_22_23_24_25",0.0019194,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",12,1,21726,1,41.7008844
+"150","Competition or Maintenance","10510_15_16_17_22_23_24_25",0.0019194,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",38,1,26,0,0.0499044
+"151","Competition or Maintenance","10550_15_28",0.000448,"Rocky Mountain Subalpine Dry-Mesic Spruce-Fir Forest and Woodland",28,0.745098039,1924,0.1,0.861952
+"152","Competition or Maintenance","10560_15_28",0.000436,"Rocky Mountain Subalpine Mesic-Wet Spruce-Fir Forest and Woodland",55,0,6,0,0.002616
+"153","Competition or Maintenance","11040_23_24",0.0118994,"Mogollon Chaparral",27,0.82745098,2187,0.1,26.0239878
+"154","Competition or Maintenance","11460_15_16_23_24_25_28",0.0482026,"Southern Rocky Mountain Montane-Subalpine Grassland",7,0.698039216,50568,2.3,2437.5090768
+"155","Insect or Disease","10110_15",0.0018518,"Rocky Mountain Aspen Forest and Woodland",52,0.450980392,250,0,0.46295
+"156","Insect or Disease","10160_15_28",0.0058672,"Colorado Plateau Pinyon-Juniper Woodland",15,0.4,12555,0.6,73.662696
+"157","Insect or Disease","10160_16_23_24_25",0.0035028,"Colorado Plateau Pinyon-Juniper Woodland",25,0.4,2137,0.1,7.4854836
+"158","Insect or Disease","10190_15",0.002891,"Great Basin Pinyon-Juniper Woodland",53,0,40,0,0.11564
+"159","Insect or Disease","10260_15",0.0080588,"Madrean Upper Montane Conifer-Oak Forest and Woodland",54,0.223529412,50,0,0.40294
+"160","Insect or Disease","10510_15_16_17_22_23_24_25",0.0077078,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",12,1,21726,1,167.4596628
+"161","Insect or Disease","10510_15_16_17_22_23_24_25",0.0077078,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",38,1,26,0,0.2004028
+"162","Insect or Disease","10520_15",0.0122,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",16,0.901960784,10168,0.5,124.0496
+"163","Insect or Disease","10520_16_23_24",0.012166,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",39,0.901960784,0,0,0
+"164","Insect or Disease","10540_15_25",0.0004576,"Southern Rocky Mountain Ponderosa Pine Woodland",1,0,1277151,58.4,584.4242976
+"165","Insect or Disease","10540_16_23_24",0.0029106,"Southern Rocky Mountain Ponderosa Pine Woodland",9,0,30279,1.4,88.1300574
+"166","Insect or Disease","10550_15_28",0.0015914,"Rocky Mountain Subalpine Dry-Mesic Spruce-Fir Forest and Woodland",28,0.745098039,1924,0.1,3.0618536
+"167","Insect or Disease","10560_15_28",0.0015386,"Rocky Mountain Subalpine Mesic-Wet Spruce-Fir Forest and Woodland",55,0,6,0,0.0092316
+"168","Insect or Disease","10610_15_25",0.0003252,"Inter-Mountain Basins Aspen-Mixed Conifer Forest and Woodland",13,0,19740,0.9,6.419448
+"169","Insect or Disease","11170_16_23_24",0.0008046,"Southern Rocky Mountain Ponderosa Pine Savanna",23,0,3803,0.2,3.0598938
+"170","Insect or Disease","11250_6_12_13_15_16_17_18_23_24_25_28",0.0175626,"Inter-Mountain Basins Big Sagebrush Steppe",31,0.874509804,180,0,3.161268
+"171","Insect or Disease","11270_15",0.0136456,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",5,0.843137255,72451,3.3,988.6373656
+"172","Insect or Disease","11270_16_23_24_25",0.0129756,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",21,0.843137255,7269,0.3,94.3196364
+"173","Mixed Fire","10110_15",0.0005872,"Rocky Mountain Aspen Forest and Woodland",52,0.450980392,250,0,0.1468
+"174","Mixed Fire","10160_15_28",0.0052476,"Colorado Plateau Pinyon-Juniper Woodland",15,0.4,12555,0.6,65.883618
+"175","Mixed Fire","10160_16_23_24_25",0.0050886,"Colorado Plateau Pinyon-Juniper Woodland",25,0.4,2137,0.1,10.8743382
+"176","Mixed Fire","10190_15",0.0029642,"Great Basin Pinyon-Juniper Woodland",53,0,40,0,0.118568
+"177","Mixed Fire","10230_14_15_24_25",0.005273,"Madrean Encinal",6,0.517647059,61191,2.8,322.660143
+"178","Mixed Fire","10230_14_15_24_25",0.005273,"Madrean Encinal",35,0.517647059,19,0,0.100187
+"179","Mixed Fire","10240_14_15_24",0.0051404,"Madrean Lower Montane Pine-Oak Forest and Woodland",3,0.117647059,141351,6.5,726.6006804
+"180","Mixed Fire","10240_14_15_24",0.0051404,"Madrean Lower Montane Pine-Oak Forest and Woodland",36,0.117647059,88,0,0.4523552
+"181","Mixed Fire","10250_14_15_24_25_26",0.004713,"Madrean Pinyon-Juniper Woodland",10,0.121568627,31453,1.4,148.237989
+"182","Mixed Fire","10250_14_15_24_25_26",0.004713,"Madrean Pinyon-Juniper Woodland",37,0.121568627,66,0,0.311058
+"183","Mixed Fire","10260_15",0.0160296,"Madrean Upper Montane Conifer-Oak Forest and Woodland",54,0.223529412,50,0,0.80148
+"184","Mixed Fire","10510_15_16_17_22_23_24_25",0.0129354,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",12,1,21726,1,281.0345004
+"185","Mixed Fire","10510_15_16_17_22_23_24_25",0.0129354,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",38,1,26,0,0.3363204
+"186","Mixed Fire","10520_15",0.0109186,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",16,0.901960784,10168,0.5,111.0203248
+"187","Mixed Fire","10520_16_23_24",0.0111998,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",39,0.901960784,0,0,0
+"188","Mixed Fire","10540_15_25",0.0093404,"Southern Rocky Mountain Ponderosa Pine Woodland",1,0,1277151,58.4,11929.1012004
+"189","Mixed Fire","10540_16_23_24",0.0044034,"Southern Rocky Mountain Ponderosa Pine Woodland",9,0,30279,1.4,133.3305486
+"190","Mixed Fire","10550_15_28",0.0022802,"Rocky Mountain Subalpine Dry-Mesic Spruce-Fir Forest and Woodland",28,0.745098039,1924,0.1,4.3871048
+"191","Mixed Fire","10560_15_28",0.0022778,"Rocky Mountain Subalpine Mesic-Wet Spruce-Fir Forest and Woodland",55,0,6,0,0.0136668
+"192","Mixed Fire","10610_15_25",0.049203,"Inter-Mountain Basins Aspen-Mixed Conifer Forest and Woodland",13,0,19740,0.9,971.26722
+"193","Mixed Fire","10640_15_16_17_23_24_27_28",0.008496,"Colorado Plateau Mixed Low Sagebrush Shrubland",40,0.843137255,300,0,2.5488
+"194","Mixed Fire","10780_16_23_24_25",0.0062484,"Colorado Plateau Blackbrush-Mormon-tea Shrubland",41,0.811764706,5,0,0.031242
+"195","Mixed Fire","11000_15",0.0012926,"Chihuahuan Mixed Desert and Thorn Scrub",60,0.478431373,1,0,0.0012926
+"196","Mixed Fire","11020_13_15_16_23_24",0.004567,"Colorado Plateau Pinyon-Juniper Shrubland",43,0,4,0,0.018268
+"197","Mixed Fire","11020_13_15_16_23_24",0.004567,"Colorado Plateau Pinyon-Juniper Shrubland",61,0,875,0,3.996125
+"198","Mixed Fire","11040_23_24",0.0026806,"Mogollon Chaparral",27,0.82745098,2187,0.1,5.8624722
+"199","Mixed Fire","11070_15",0.0058584,"Rocky Mountain Gambel Oak-Mixed Montane Shrubland",8,0.874509804,36228,1.7,212.2381152
+"200","Mixed Fire","11070_23_24",0.0066132,"Rocky Mountain Gambel Oak-Mixed Montane Shrubland",44,0.874509804,378,0,2.4997896
+"201","Mixed Fire","11150_15_16_23_24",0.0044852,"Inter-Mountain Basins Juniper Savanna",45,0.266666667,258,0,1.1571816
+"202","Mixed Fire","11150_15_16_23_24",0.0044852,"Inter-Mountain Basins Juniper Savanna",62,0.266666667,105,0,0.470946
+"203","Mixed Fire","11160_15_25",0.0047488,"Madrean Juniper Savanna",63,0.560784314,939,0,4.4591232
+"204","Mixed Fire","11160_24",0.0046776,"Madrean Juniper Savanna",46,0.560784314,4,0,0.0187104
+"205","Mixed Fire","11170_16_23_24",0.0124778,"Southern Rocky Mountain Ponderosa Pine Savanna",23,0,3803,0.2,47.4530734
+"206","Mixed Fire","11350_15_28",0.0270324,"Inter-Mountain Basins Semi-Desert Grassland",14,0.82745098,16463,0.8,445.0344012
+"207","Mixed Fire","11450_22_24_28",0.0061454,"Rocky Mountain Subalpine-Montane Mesic Meadow",48,1,43,0,0.2642522
+"208","Mixed Fire","11550_15",0.011958,"North American Warm Desert Riparian Systems",64,0.458823529,40,0,0.47832
+"209","Native Grazing","10110_15",0.0131856,"Rocky Mountain Aspen Forest and Woodland",52,0.450980392,250,0,3.2964
+"210","Native Grazing","10640_15_16_17_23_24_27_28",0.0501852,"Colorado Plateau Mixed Low Sagebrush Shrubland",40,0.843137255,300,0,15.05556
+"211","Native Grazing","11350_15_28",0.0002096,"Inter-Mountain Basins Semi-Desert Grassland",14,0.82745098,16463,0.8,3.4506448
+"212","Native Grazing","11350_16_23_24",0.0002182,"Inter-Mountain Basins Semi-Desert Grassland",24,0.82745098,3901,0.2,0.8511982
+"213","Non Fire Disturbances","10110_15",0.0179518,"Rocky Mountain Aspen Forest and Woodland",52,0.450980392,250,0,4.48795
+"214","Non Fire Disturbances","10160_15_28",0.0108942,"Colorado Plateau Pinyon-Juniper Woodland",15,0.4,12555,0.6,136.776681
+"215","Non Fire Disturbances","10160_16_23_24_25",0.0092552,"Colorado Plateau Pinyon-Juniper Woodland",25,0.4,2137,0.1,19.7783624
+"216","Non Fire Disturbances","10190_15",0.002891,"Great Basin Pinyon-Juniper Woodland",53,0,40,0,0.11564
+"217","Non Fire Disturbances","10230_14_15_24_25",0.0048148,"Madrean Encinal",6,0.517647059,61191,2.8,294.6224268
+"218","Non Fire Disturbances","10230_14_15_24_25",0.0048148,"Madrean Encinal",35,0.517647059,19,0,0.0914812
+"219","Non Fire Disturbances","10240_14_15_24",0.0047202,"Madrean Lower Montane Pine-Oak Forest and Woodland",3,0.117647059,141351,6.5,667.2049902
+"220","Non Fire Disturbances","10240_14_15_24",0.0047202,"Madrean Lower Montane Pine-Oak Forest and Woodland",36,0.117647059,88,0,0.4153776
+"221","Non Fire Disturbances","10250_14_15_24_25_26",0.005702,"Madrean Pinyon-Juniper Woodland",10,0.121568627,31453,1.4,179.345006
+"222","Non Fire Disturbances","10250_14_15_24_25_26",0.005702,"Madrean Pinyon-Juniper Woodland",37,0.121568627,66,0,0.376332
+"223","Non Fire Disturbances","10260_15",0.0105842,"Madrean Upper Montane Conifer-Oak Forest and Woodland",54,0.223529412,50,0,0.52921
+"224","Non Fire Disturbances","10510_15_16_17_22_23_24_25",0.010599,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",12,1,21726,1,230.273874
+"225","Non Fire Disturbances","10510_15_16_17_22_23_24_25",0.010599,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",38,1,26,0,0.275574
+"226","Non Fire Disturbances","10520_15",0.0155476,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",16,0.901960784,10168,0.5,158.0879968
+"227","Non Fire Disturbances","10520_16_23_24",0.0156116,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",39,0.901960784,0,0,0
+"228","Non Fire Disturbances","10540_15_25",0.0004576,"Southern Rocky Mountain Ponderosa Pine Woodland",1,0,1277151,58.4,584.4242976
+"229","Non Fire Disturbances","10540_16_23_24",0.0029106,"Southern Rocky Mountain Ponderosa Pine Woodland",9,0,30279,1.4,88.1300574
+"230","Non Fire Disturbances","10550_15_28",0.0040274,"Rocky Mountain Subalpine Dry-Mesic Spruce-Fir Forest and Woodland",28,0.745098039,1924,0.1,7.7487176
+"231","Non Fire Disturbances","10560_15_28",0.0039256,"Rocky Mountain Subalpine Mesic-Wet Spruce-Fir Forest and Woodland",55,0,6,0,0.0235536
+"232","Non Fire Disturbances","10610_15_25",0.0003252,"Inter-Mountain Basins Aspen-Mixed Conifer Forest and Woodland",13,0,19740,0.9,6.419448
+"233","Non Fire Disturbances","10640_15_16_17_23_24_27_28",0.0501852,"Colorado Plateau Mixed Low Sagebrush Shrubland",40,0.843137255,300,0,15.05556
+"234","Non Fire Disturbances","10770_15",0.0042864,"Chihuahuan Succulent Desert Scrub",56,0.411764706,3,0,0.0128592
+"235","Non Fire Disturbances","10780_16_23_24_25",0.0133666,"Colorado Plateau Blackbrush-Mormon-tea Shrubland",41,0.811764706,5,0,0.066833
+"236","Non Fire Disturbances","10804_6_12_15_16_17_18_23_24_25",0.0059578,"Inter-Mountain Basins Big Sagebrush Shrubland - Upland",18,0.909803922,7698,0.4,45.8631444
+"237","Non Fire Disturbances","10804_6_12_15_16_17_18_23_24_25",0.0059578,"Inter-Mountain Basins Big Sagebrush Shrubland - Upland",30,0.909803922,1151,0.1,6.8574278
+"238","Non Fire Disturbances","10810_15_16_23_24_28",0.0547222,"Inter-Mountain Basins Mixed Salt Desert Scrub",26,0.478431373,1560,0.1,85.366632
+"239","Non Fire Disturbances","10810_15_16_23_24_28",0.0547222,"Inter-Mountain Basins Mixed Salt Desert Scrub",57,0.478431373,127,0,6.9497194
+"240","Non Fire Disturbances","10910_15",0.0088014,"Sonoran Mid-Elevation Desert Scrub",59,0.388235294,54,0,0.4752756
+"241","Non Fire Disturbances","10930_13_15_16_23_24_28",0.0076704,"Southern Colorado Plateau Sand Shrubland",42,0.094117647,18,0,0.1380672
+"242","Non Fire Disturbances","11000_15",0.011197,"Chihuahuan Mixed Desert and Thorn Scrub",60,0.478431373,1,0,0.011197
+"243","Non Fire Disturbances","11040_23_24",0.0140878,"Mogollon Chaparral",27,0.82745098,2187,0.1,30.8100186
+"244","Non Fire Disturbances","11090_15_25",0.0019154,"Sonoran Paloverde-Mixed Cacti Desert Scrub",22,0.960784314,7055,0.3,13.513147
+"245","Non Fire Disturbances","11160_15_25",0.0057304,"Madrean Juniper Savanna",63,0.560784314,939,0,5.3808456
+"246","Non Fire Disturbances","11160_24",0.0050234,"Madrean Juniper Savanna",46,0.560784314,4,0,0.0200936
+"247","Non Fire Disturbances","11170_16_23_24",0.0008046,"Southern Rocky Mountain Ponderosa Pine Savanna",23,0,3803,0.2,3.0598938
+"248","Non Fire Disturbances","11250_6_12_13_15_16_17_18_23_24_25_28",0.022935,"Inter-Mountain Basins Big Sagebrush Steppe",31,0.874509804,180,0,4.1283
+"249","Non Fire Disturbances","11270_15",0.1146324,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",5,0.843137255,72451,3.3,8305.2320124
+"250","Non Fire Disturbances","11270_16_23_24_25",0.1127016,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",21,0.843137255,7269,0.3,819.2279304
+"251","Non Fire Disturbances","11350_15_28",0.0219206,"Inter-Mountain Basins Semi-Desert Grassland",14,0.82745098,16463,0.8,360.8788378
+"252","Non Fire Disturbances","11350_16_23_24",0.020054,"Inter-Mountain Basins Semi-Desert Grassland",24,0.82745098,3901,0.2,78.230654
+"253","Non Fire Disturbances","11460_15_16_23_24_25_28",0.0482026,"Southern Rocky Mountain Montane-Subalpine Grassland",7,0.698039216,50568,2.3,2437.5090768
+"254","Non Fire Disturbances","11530_16_23_24_25_27",0.0136052,"Inter-Mountain Basins Greasewood Flat",49,0.882352941,8,0,0.1088416
+"255","Non Fire Disturbances","11550_15",0.0689238,"North American Warm Desert Riparian Systems",64,0.458823529,40,0,2.756952
+"256","Non Fire Disturbances","11552_13_14_15",0.1196522,"North American Warm Desert Riparian Systems - Stringers",29,0.458823529,1642,0.1,196.4689124
+"257","Non Fire Disturbances","11590_15",0.2066052,"Rocky Mountain Montane Riparian Systems",4,0.364705882,126933,5.8,26225.0178516
+"258","Non Fire Disturbances","11590_16_23_24_26",0.3983226,"Rocky Mountain Montane Riparian Systems",50,0.364705882,589,0,234.6120114
+"259","Non Fire Disturbances","11600_15_28",0.390715,"Rocky Mountain Subalpine/Upper Montane Riparian Systems",65,0.654901961,584,0,228.17756
+"260","Non Replacement Fire","10110_15",0.0017728,"Rocky Mountain Aspen Forest and Woodland",52,0.450980392,250,0,0.4432
+"261","Non Replacement Fire","10160_15_28",0.0057084,"Colorado Plateau Pinyon-Juniper Woodland",15,0.4,12555,0.6,71.668962
+"262","Non Replacement Fire","10160_16_23_24_25",0.0055492,"Colorado Plateau Pinyon-Juniper Woodland",25,0.4,2137,0.1,11.8586404
+"263","Non Replacement Fire","10190_15",0.0042864,"Great Basin Pinyon-Juniper Woodland",53,0,40,0,0.171456
+"264","Non Replacement Fire","10230_14_15_24_25",0.0352338,"Madrean Encinal",6,0.517647059,61191,2.8,2155.9914558
+"265","Non Replacement Fire","10230_14_15_24_25",0.0352338,"Madrean Encinal",35,0.517647059,19,0,0.6694422
+"266","Non Replacement Fire","10240_14_15_24",0.0345032,"Madrean Lower Montane Pine-Oak Forest and Woodland",3,0.117647059,141351,6.5,4877.0618232
+"267","Non Replacement Fire","10240_14_15_24",0.0345032,"Madrean Lower Montane Pine-Oak Forest and Woodland",36,0.117647059,88,0,3.0362816
+"268","Non Replacement Fire","10250_14_15_24_25_26",0.0141346,"Madrean Pinyon-Juniper Woodland",10,0.121568627,31453,1.4,444.5755738
+"269","Non Replacement Fire","10250_14_15_24_25_26",0.0141346,"Madrean Pinyon-Juniper Woodland",37,0.121568627,66,0,0.9328836
+"270","Non Replacement Fire","10260_15",0.0945578,"Madrean Upper Montane Conifer-Oak Forest and Woodland",54,0.223529412,50,0,4.72789
+"271","Non Replacement Fire","10510_15_16_17_22_23_24_25",0.0826982,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",12,1,21726,1,1796.7010932
+"272","Non Replacement Fire","10510_15_16_17_22_23_24_25",0.0826982,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",38,1,26,0,2.1501532
+"273","Non Replacement Fire","10520_15",0.0245296,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",16,0.901960784,10168,0.5,249.4169728
+"274","Non Replacement Fire","10520_16_23_24",0.0247144,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",39,0.901960784,0,0,0
+"275","Non Replacement Fire","10540_15_25",0.1059008,"Southern Rocky Mountain Ponderosa Pine Woodland",1,0,1277151,58.4,135251.3126208
+"276","Non Replacement Fire","10540_16_23_24",0.0551132,"Southern Rocky Mountain Ponderosa Pine Woodland",9,0,30279,1.4,1668.7725828
+"277","Non Replacement Fire","10550_15_28",0.0022802,"Rocky Mountain Subalpine Dry-Mesic Spruce-Fir Forest and Woodland",28,0.745098039,1924,0.1,4.3871048
+"278","Non Replacement Fire","10560_15_28",0.0022778,"Rocky Mountain Subalpine Mesic-Wet Spruce-Fir Forest and Woodland",55,0,6,0,0.0136668
+"279","Non Replacement Fire","10610_15_25",0.0581508,"Inter-Mountain Basins Aspen-Mixed Conifer Forest and Woodland",13,0,19740,0.9,1147.896792
+"280","Non Replacement Fire","10640_15_16_17_23_24_27_28",0.008496,"Colorado Plateau Mixed Low Sagebrush Shrubland",40,0.843137255,300,0,2.5488
+"281","Non Replacement Fire","10780_16_23_24_25",0.0062484,"Colorado Plateau Blackbrush-Mormon-tea Shrubland",41,0.811764706,5,0,0.031242
+"282","Non Replacement Fire","11000_15",0.0012926,"Chihuahuan Mixed Desert and Thorn Scrub",60,0.478431373,1,0,0.0012926
+"283","Non Replacement Fire","11020_13_15_16_23_24",0.0124518,"Colorado Plateau Pinyon-Juniper Shrubland",43,0,4,0,0.0498072
+"284","Non Replacement Fire","11020_13_15_16_23_24",0.0124518,"Colorado Plateau Pinyon-Juniper Shrubland",61,0,875,0,10.895325
+"285","Non Replacement Fire","11040_15",0.0005036,"Mogollon Chaparral",11,0.82745098,27473,1.3,13.8354028
+"286","Non Replacement Fire","11040_23_24",0.0026806,"Mogollon Chaparral",27,0.82745098,2187,0.1,5.8624722
+"287","Non Replacement Fire","11070_15",0.0058584,"Rocky Mountain Gambel Oak-Mixed Montane Shrubland",8,0.874509804,36228,1.7,212.2381152
+"288","Non Replacement Fire","11070_23_24",0.0066132,"Rocky Mountain Gambel Oak-Mixed Montane Shrubland",44,0.874509804,378,0,2.4997896
+"289","Non Replacement Fire","11150_15_16_23_24",0.0124066,"Inter-Mountain Basins Juniper Savanna",45,0.266666667,258,0,3.2009028
+"290","Non Replacement Fire","11150_15_16_23_24",0.0124066,"Inter-Mountain Basins Juniper Savanna",62,0.266666667,105,0,1.302693
+"291","Non Replacement Fire","11160_15_25",0.0142738,"Madrean Juniper Savanna",63,0.560784314,939,0,13.4030982
+"292","Non Replacement Fire","11160_24",0.0147478,"Madrean Juniper Savanna",46,0.560784314,4,0,0.0589912
+"293","Non Replacement Fire","11170_13_15_28",0.08955,"Southern Rocky Mountain Ponderosa Pine Savanna",2,0,185004,8.5,16567.1082
+"294","Non Replacement Fire","11170_16_23_24",0.1183966,"Southern Rocky Mountain Ponderosa Pine Savanna",23,0,3803,0.2,450.2622698
+"295","Non Replacement Fire","11210_15",0.0250022,"Apacherian-Chihuahuan Semi-Desert Grassland and Steppe",17,0.847058824,7989,0.4,199.7425758
+"296","Non Replacement Fire","11210_24",0.0233116,"Apacherian-Chihuahuan Semi-Desert Grassland and Steppe",47,0.847058824,87,0,2.0281092
+"297","Non Replacement Fire","11350_15_28",0.0270324,"Inter-Mountain Basins Semi-Desert Grassland",14,0.82745098,16463,0.8,445.0344012
+"298","Non Replacement Fire","11450_22_24_28",0.0061454,"Rocky Mountain Subalpine-Montane Mesic Meadow",48,1,43,0,0.2642522
+"299","Non Replacement Fire","11460_15_16_23_24_25_28",0.0483686,"Southern Rocky Mountain Montane-Subalpine Grassland",7,0.698039216,50568,2.3,2445.9033648
+"300","Non Replacement Fire","11550_15",0.011958,"North American Warm Desert Riparian Systems",64,0.458823529,40,0,0.47832
+"301","Non Replacement Fire","11590_15",0.1327698,"Rocky Mountain Montane Riparian Systems",4,0.364705882,126933,5.8,16852.8690234
+"302","Non Replacement Fire","11590_16_23_24_26",0.0129418,"Rocky Mountain Montane Riparian Systems",50,0.364705882,589,0,7.6227202
+"303","Non Replacement Fire","11600_15_28",0.0126064,"Rocky Mountain Subalpine/Upper Montane Riparian Systems",65,0.654901961,584,0,7.3621376
+"304","Optional 1","11090_15_25",0.0009352,"Sonoran Paloverde-Mixed Cacti Desert Scrub",22,0.960784314,7055,0.3,6.597836
+"305","Optional 1","11550_15",0.0197866,"North American Warm Desert Riparian Systems",64,0.458823529,40,0,0.791464
+"306","Optional 1","11590_15",0.0559136,"Rocky Mountain Montane Riparian Systems",4,0.364705882,126933,5.8,7097.2809888
+"307","Optional 1","11590_16_23_24_26",0.0642878,"Rocky Mountain Montane Riparian Systems",50,0.364705882,589,0,37.8655142
+"308","Optional 1","11600_15_28",0.063026,"Rocky Mountain Subalpine/Upper Montane Riparian Systems",65,0.654901961,584,0,36.807184
+"309","Optional 2","11590_16_23_24_26",0.012915,"Rocky Mountain Montane Riparian Systems",50,0.364705882,589,0,7.606935
+"310","Optional 2","11600_15_28",0.0125574,"Rocky Mountain Subalpine/Upper Montane Riparian Systems",65,0.654901961,584,0,7.3335216
+"311","Optional Types","11090_15_25",0.0009352,"Sonoran Paloverde-Mixed Cacti Desert Scrub",22,0.960784314,7055,0.3,6.597836
+"312","Optional Types","11550_15",0.0197866,"North American Warm Desert Riparian Systems",64,0.458823529,40,0,0.791464
+"313","Optional Types","11590_15",0.0559136,"Rocky Mountain Montane Riparian Systems",4,0.364705882,126933,5.8,7097.2809888
+"314","Optional Types","11590_16_23_24_26",0.0772028,"Rocky Mountain Montane Riparian Systems",50,0.364705882,589,0,45.4724492
+"315","Optional Types","11600_15_28",0.0755834,"Rocky Mountain Subalpine/Upper Montane Riparian Systems",65,0.654901961,584,0,44.1407056
+"316","Replacement Fire","10110_15",0.0069428,"Rocky Mountain Aspen Forest and Woodland",52,0.450980392,250,0,1.7357
+"317","Replacement Fire","10160_15_28",0.0023524,"Colorado Plateau Pinyon-Juniper Woodland",15,0.4,12555,0.6,29.534382
+"318","Replacement Fire","10160_16_23_24_25",0.0023032,"Colorado Plateau Pinyon-Juniper Woodland",25,0.4,2137,0.1,4.9219384
+"319","Replacement Fire","10190_15",0.0021042,"Great Basin Pinyon-Juniper Woodland",53,0,40,0,0.084168
+"320","Replacement Fire","10230_14_15_24_25",0.0079334,"Madrean Encinal",6,0.517647059,61191,2.8,485.4526794
+"321","Replacement Fire","10230_14_15_24_25",0.0079334,"Madrean Encinal",35,0.517647059,19,0,0.1507346
+"322","Replacement Fire","10240_14_15_24",0.0078772,"Madrean Lower Montane Pine-Oak Forest and Woodland",3,0.117647059,141351,6.5,1113.4500972
+"323","Replacement Fire","10240_14_15_24",0.0078772,"Madrean Lower Montane Pine-Oak Forest and Woodland",36,0.117647059,88,0,0.6931936
+"324","Replacement Fire","10250_14_15_24_25_26",0.007462,"Madrean Pinyon-Juniper Woodland",10,0.121568627,31453,1.4,234.702286
+"325","Replacement Fire","10250_14_15_24_25_26",0.007462,"Madrean Pinyon-Juniper Woodland",37,0.121568627,66,0,0.492492
+"326","Replacement Fire","10260_15",0.0032068,"Madrean Upper Montane Conifer-Oak Forest and Woodland",54,0.223529412,50,0,0.16034
+"327","Replacement Fire","10510_15_16_17_22_23_24_25",0.0107956,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",12,1,21726,1,234.5452056
+"328","Replacement Fire","10510_15_16_17_22_23_24_25",0.0107956,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",38,1,26,0,0.2806856
+"329","Replacement Fire","10520_15",0.0053154,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",16,0.901960784,10168,0.5,54.0469872
+"330","Replacement Fire","10520_16_23_24",0.005481,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",39,0.901960784,0,0,0
+"331","Replacement Fire","10540_15_25",0.0025054,"Southern Rocky Mountain Ponderosa Pine Woodland",1,0,1277151,58.4,3199.7741154
+"332","Replacement Fire","10540_16_23_24",0.0035864,"Southern Rocky Mountain Ponderosa Pine Woodland",9,0,30279,1.4,108.5926056
+"333","Replacement Fire","10550_15_28",0.0050166,"Rocky Mountain Subalpine Dry-Mesic Spruce-Fir Forest and Woodland",28,0.745098039,1924,0.1,9.6519384
+"334","Replacement Fire","10560_15_28",0.005009,"Rocky Mountain Subalpine Mesic-Wet Spruce-Fir Forest and Woodland",55,0,6,0,0.030054
+"335","Replacement Fire","10610_15_25",0.022874,"Inter-Mountain Basins Aspen-Mixed Conifer Forest and Woodland",13,0,19740,0.9,451.53276
+"336","Replacement Fire","10640_15_16_17_23_24_27_28",0.004241,"Colorado Plateau Mixed Low Sagebrush Shrubland",40,0.843137255,300,0,1.2723
+"337","Replacement Fire","10770_15",0.002871,"Chihuahuan Succulent Desert Scrub",56,0.411764706,3,0,0.008613
+"338","Replacement Fire","10780_16_23_24_25",0.0068986,"Colorado Plateau Blackbrush-Mormon-tea Shrubland",41,0.811764706,5,0,0.034493
+"339","Replacement Fire","10804_6_12_15_16_17_18_23_24_25",0.0084418,"Inter-Mountain Basins Big Sagebrush Shrubland - Upland",18,0.909803922,7698,0.4,64.9849764
+"340","Replacement Fire","10804_6_12_15_16_17_18_23_24_25",0.0084418,"Inter-Mountain Basins Big Sagebrush Shrubland - Upland",30,0.909803922,1151,0.1,9.7165118
+"341","Replacement Fire","10810_15_16_23_24_28",0.001596,"Inter-Mountain Basins Mixed Salt Desert Scrub",26,0.478431373,1560,0.1,2.48976
+"342","Replacement Fire","10810_15_16_23_24_28",0.001596,"Inter-Mountain Basins Mixed Salt Desert Scrub",57,0.478431373,127,0,0.202692
+"343","Replacement Fire","10820_12_15_16_17_23_24",0.0012436,"Mojave Mid-Elevation Mixed Desert Scrub",33,0.28627451,361,0,0.4489396
+"344","Replacement Fire","10820_12_15_16_17_23_24",0.0012436,"Mojave Mid-Elevation Mixed Desert Scrub",58,0.28627451,103,0,0.1280908
+"345","Replacement Fire","10910_15",0.0028784,"Sonoran Mid-Elevation Desert Scrub",59,0.388235294,54,0,0.1554336
+"346","Replacement Fire","10930_13_15_16_23_24_28",0.0046186,"Southern Colorado Plateau Sand Shrubland",42,0.094117647,18,0,0.0831348
+"347","Replacement Fire","11000_15",0.0018368,"Chihuahuan Mixed Desert and Thorn Scrub",60,0.478431373,1,0,0.0018368
+"348","Replacement Fire","11020_13_15_16_23_24",0.003029,"Colorado Plateau Pinyon-Juniper Shrubland",43,0,4,0,0.012116
+"349","Replacement Fire","11020_13_15_16_23_24",0.003029,"Colorado Plateau Pinyon-Juniper Shrubland",61,0,875,0,2.650375
+"350","Replacement Fire","11040_15",0.0126044,"Mogollon Chaparral",11,0.82745098,27473,1.3,346.2806812
+"351","Replacement Fire","11040_23_24",0.0211108,"Mogollon Chaparral",27,0.82745098,2187,0.1,46.1693196
+"352","Replacement Fire","11070_15",0.0202162,"Rocky Mountain Gambel Oak-Mixed Montane Shrubland",8,0.874509804,36228,1.7,732.3924936
+"353","Replacement Fire","11070_23_24",0.0193708,"Rocky Mountain Gambel Oak-Mixed Montane Shrubland",44,0.874509804,378,0,7.3221624
+"354","Replacement Fire","11090_15_25",0.00095,"Sonoran Paloverde-Mixed Cacti Desert Scrub",22,0.960784314,7055,0.3,6.70225
+"355","Replacement Fire","11150_15_16_23_24",0.00301,"Inter-Mountain Basins Juniper Savanna",45,0.266666667,258,0,0.77658
+"356","Replacement Fire","11150_15_16_23_24",0.00301,"Inter-Mountain Basins Juniper Savanna",62,0.266666667,105,0,0.31605
+"357","Replacement Fire","11160_15_25",0.0074226,"Madrean Juniper Savanna",63,0.560784314,939,0,6.9698214
+"358","Replacement Fire","11160_24",0.0072072,"Madrean Juniper Savanna",46,0.560784314,4,0,0.0288288
+"359","Replacement Fire","11170_13_15_28",0.0026792,"Southern Rocky Mountain Ponderosa Pine Savanna",2,0,185004,8.5,495.6627168
+"360","Replacement Fire","11170_16_23_24",0.006086,"Southern Rocky Mountain Ponderosa Pine Savanna",23,0,3803,0.2,23.145058
+"361","Replacement Fire","11210_15",0.1012154,"Apacherian-Chihuahuan Semi-Desert Grassland and Steppe",17,0.847058824,7989,0.4,808.6098306
+"362","Replacement Fire","11210_24",0.100566,"Apacherian-Chihuahuan Semi-Desert Grassland and Steppe",47,0.847058824,87,0,8.749242
+"363","Replacement Fire","11250_6_12_13_15_16_17_18_23_24_25_28",0.0086132,"Inter-Mountain Basins Big Sagebrush Steppe",31,0.874509804,180,0,1.550376
+"364","Replacement Fire","11270_15",0.0084802,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",5,0.843137255,72451,3.3,614.3989702
+"365","Replacement Fire","11270_16_23_24_25",0.0094344,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",21,0.843137255,7269,0.3,68.5786536
+"366","Replacement Fire","11350_15_28",0.0130124,"Inter-Mountain Basins Semi-Desert Grassland",14,0.82745098,16463,0.8,214.2231412
+"367","Replacement Fire","11350_16_23_24",0.0399014,"Inter-Mountain Basins Semi-Desert Grassland",24,0.82745098,3901,0.2,155.6553614
+"368","Replacement Fire","11450_22_24_28",0.0247044,"Rocky Mountain Subalpine-Montane Mesic Meadow",48,1,43,0,1.0622892
+"369","Replacement Fire","11460_15_16_23_24_25_28",0.0516602,"Southern Rocky Mountain Montane-Subalpine Grassland",7,0.698039216,50568,2.3,2612.3529936
+"370","Replacement Fire","11530_16_23_24_25_27",0.0047642,"Inter-Mountain Basins Greasewood Flat",49,0.882352941,8,0,0.0381136
+"371","Replacement Fire","11550_15",0.001297,"North American Warm Desert Riparian Systems",64,0.458823529,40,0,0.05188
+"372","Replacement Fire","11552_13_14_15",0.001372,"North American Warm Desert Riparian Systems - Stringers",29,0.458823529,1642,0.1,2.252824
+"373","Replacement Fire","11590_15",0.0186712,"Rocky Mountain Montane Riparian Systems",4,0.364705882,126933,5.8,2369.9914296
+"374","Replacement Fire","11590_16_23_24_26",0.0037284,"Rocky Mountain Montane Riparian Systems",50,0.364705882,589,0,2.1960276
+"375","Replacement Fire","11600_15_28",0.0037002,"Rocky Mountain Subalpine/Upper Montane Riparian Systems",65,0.654901961,584,0,2.1609168
+"376","Surface Fire","10110_15",0.0011856,"Rocky Mountain Aspen Forest and Woodland",52,0.450980392,250,0,0.2964
+"377","Surface Fire","10160_15_28",0.0004608,"Colorado Plateau Pinyon-Juniper Woodland",15,0.4,12555,0.6,5.785344
+"378","Surface Fire","10160_16_23_24_25",0.0004606,"Colorado Plateau Pinyon-Juniper Woodland",25,0.4,2137,0.1,0.9843022
+"379","Surface Fire","10190_15",0.0013222,"Great Basin Pinyon-Juniper Woodland",53,0,40,0,0.052888
+"380","Surface Fire","10230_14_15_24_25",0.0299608,"Madrean Encinal",6,0.517647059,61191,2.8,1833.3313128
+"381","Surface Fire","10230_14_15_24_25",0.0299608,"Madrean Encinal",35,0.517647059,19,0,0.5692552
+"382","Surface Fire","10240_14_15_24",0.0293628,"Madrean Lower Montane Pine-Oak Forest and Woodland",3,0.117647059,141351,6.5,4150.4611428
+"383","Surface Fire","10240_14_15_24",0.0293628,"Madrean Lower Montane Pine-Oak Forest and Woodland",36,0.117647059,88,0,2.5839264
+"384","Surface Fire","10250_14_15_24_25_26",0.0094216,"Madrean Pinyon-Juniper Woodland",10,0.121568627,31453,1.4,296.3375848
+"385","Surface Fire","10250_14_15_24_25_26",0.0094216,"Madrean Pinyon-Juniper Woodland",37,0.121568627,66,0,0.6218256
+"386","Surface Fire","10260_15",0.0785282,"Madrean Upper Montane Conifer-Oak Forest and Woodland",54,0.223529412,50,0,3.92641
+"387","Surface Fire","10510_15_16_17_22_23_24_25",0.0697628,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",12,1,21726,1,1515.6665928
+"388","Surface Fire","10510_15_16_17_22_23_24_25",0.0697628,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",38,1,26,0,1.8138328
+"389","Surface Fire","10520_15",0.013611,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",16,0.901960784,10168,0.5,138.396648
+"390","Surface Fire","10520_16_23_24",0.0135146,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",39,0.901960784,0,0,0
+"391","Surface Fire","10540_15_25",0.0965604,"Southern Rocky Mountain Ponderosa Pine Woodland",1,0,1277151,58.4,123322.2114204
+"392","Surface Fire","10540_16_23_24",0.0507098,"Southern Rocky Mountain Ponderosa Pine Woodland",9,0,30279,1.4,1535.4420342
+"393","Surface Fire","10610_15_25",0.0089478,"Inter-Mountain Basins Aspen-Mixed Conifer Forest and Woodland",13,0,19740,0.9,176.629572
+"394","Surface Fire","11020_13_15_16_23_24",0.0078848,"Colorado Plateau Pinyon-Juniper Shrubland",43,0,4,0,0.0315392
+"395","Surface Fire","11020_13_15_16_23_24",0.0078848,"Colorado Plateau Pinyon-Juniper Shrubland",61,0,875,0,6.8992
+"396","Surface Fire","11040_15",0.0005036,"Mogollon Chaparral",11,0.82745098,27473,1.3,13.8354028
+"397","Surface Fire","11150_15_16_23_24",0.0079214,"Inter-Mountain Basins Juniper Savanna",45,0.266666667,258,0,2.0437212
+"398","Surface Fire","11150_15_16_23_24",0.0079214,"Inter-Mountain Basins Juniper Savanna",62,0.266666667,105,0,0.831747
+"399","Surface Fire","11160_15_25",0.009525,"Madrean Juniper Savanna",63,0.560784314,939,0,8.943975
+"400","Surface Fire","11160_24",0.0100702,"Madrean Juniper Savanna",46,0.560784314,4,0,0.0402808
+"401","Surface Fire","11170_13_15_28",0.08955,"Southern Rocky Mountain Ponderosa Pine Savanna",2,0,185004,8.5,16567.1082
+"402","Surface Fire","11170_16_23_24",0.1059188,"Southern Rocky Mountain Ponderosa Pine Savanna",23,0,3803,0.2,402.8091964
+"403","Surface Fire","11210_15",0.0250022,"Apacherian-Chihuahuan Semi-Desert Grassland and Steppe",17,0.847058824,7989,0.4,199.7425758
+"404","Surface Fire","11210_24",0.0233116,"Apacherian-Chihuahuan Semi-Desert Grassland and Steppe",47,0.847058824,87,0,2.0281092
+"405","Surface Fire","11460_15_16_23_24_25_28",0.0483686,"Southern Rocky Mountain Montane-Subalpine Grassland",7,0.698039216,50568,2.3,2445.9033648
+"406","Surface Fire","11590_15",0.1327698,"Rocky Mountain Montane Riparian Systems",4,0.364705882,126933,5.8,16852.8690234
+"407","Surface Fire","11590_16_23_24_26",0.0129418,"Rocky Mountain Montane Riparian Systems",50,0.364705882,589,0,7.6227202
+"408","Surface Fire","11600_15_28",0.0126064,"Rocky Mountain Subalpine/Upper Montane Riparian Systems",65,0.654901961,584,0,7.3621376
+"409","Wind or Weather or Stress","10110_15",0.0029144,"Rocky Mountain Aspen Forest and Woodland",52,0.450980392,250,0,0.7286
+"410","Wind or Weather or Stress","10160_15_28",0.0015388,"Colorado Plateau Pinyon-Juniper Woodland",15,0.4,12555,0.6,19.319634
+"411","Wind or Weather or Stress","10160_16_23_24_25",0.0020252,"Colorado Plateau Pinyon-Juniper Woodland",25,0.4,2137,0.1,4.3278524
+"412","Wind or Weather or Stress","10230_14_15_24_25",0.0048148,"Madrean Encinal",6,0.517647059,61191,2.8,294.6224268
+"413","Wind or Weather or Stress","10230_14_15_24_25",0.0048148,"Madrean Encinal",35,0.517647059,19,0,0.0914812
+"414","Wind or Weather or Stress","10240_14_15_24",0.0047202,"Madrean Lower Montane Pine-Oak Forest and Woodland",3,0.117647059,141351,6.5,667.2049902
+"415","Wind or Weather or Stress","10240_14_15_24",0.0047202,"Madrean Lower Montane Pine-Oak Forest and Woodland",36,0.117647059,88,0,0.4153776
+"416","Wind or Weather or Stress","10250_14_15_24_25_26",0.005702,"Madrean Pinyon-Juniper Woodland",10,0.121568627,31453,1.4,179.345006
+"417","Wind or Weather or Stress","10250_14_15_24_25_26",0.005702,"Madrean Pinyon-Juniper Woodland",37,0.121568627,66,0,0.376332
+"418","Wind or Weather or Stress","10260_15",0.0010992,"Madrean Upper Montane Conifer-Oak Forest and Woodland",54,0.223529412,50,0,0.05496
+"419","Wind or Weather or Stress","10510_15_16_17_22_23_24_25",0.0009718,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",12,1,21726,1,21.1133268
+"420","Wind or Weather or Stress","10510_15_16_17_22_23_24_25",0.0009718,"Southern Rocky Mountain Dry-Mesic Montane Mixed Conifer Forest and Woodland",38,1,26,0,0.0252668
+"421","Wind or Weather or Stress","10520_15",0.0033476,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",16,0.901960784,10168,0.5,34.0383968
+"422","Wind or Weather or Stress","10520_16_23_24",0.0034456,"Southern Rocky Mountain Mesic Montane Mixed Conifer Forest and Woodland",39,0.901960784,0,0,0
+"423","Wind or Weather or Stress","10550_15_28",0.001988,"Rocky Mountain Subalpine Dry-Mesic Spruce-Fir Forest and Woodland",28,0.745098039,1924,0.1,3.824912
+"424","Wind or Weather or Stress","10560_15_28",0.001951,"Rocky Mountain Subalpine Mesic-Wet Spruce-Fir Forest and Woodland",55,0,6,0,0.011706
+"425","Wind or Weather or Stress","10770_15",0.0042864,"Chihuahuan Succulent Desert Scrub",56,0.411764706,3,0,0.0128592
+"426","Wind or Weather or Stress","10780_16_23_24_25",0.0133666,"Colorado Plateau Blackbrush-Mormon-tea Shrubland",41,0.811764706,5,0,0.066833
+"427","Wind or Weather or Stress","10804_6_12_15_16_17_18_23_24_25",0.0059578,"Inter-Mountain Basins Big Sagebrush Shrubland - Upland",18,0.909803922,7698,0.4,45.8631444
+"428","Wind or Weather or Stress","10804_6_12_15_16_17_18_23_24_25",0.0059578,"Inter-Mountain Basins Big Sagebrush Shrubland - Upland",30,0.909803922,1151,0.1,6.8574278
+"429","Wind or Weather or Stress","10810_15_16_23_24_28",0.0547222,"Inter-Mountain Basins Mixed Salt Desert Scrub",26,0.478431373,1560,0.1,85.366632
+"430","Wind or Weather or Stress","10810_15_16_23_24_28",0.0547222,"Inter-Mountain Basins Mixed Salt Desert Scrub",57,0.478431373,127,0,6.9497194
+"431","Wind or Weather or Stress","10910_15",0.0088014,"Sonoran Mid-Elevation Desert Scrub",59,0.388235294,54,0,0.4752756
+"432","Wind or Weather or Stress","10930_13_15_16_23_24_28",0.0076704,"Southern Colorado Plateau Sand Shrubland",42,0.094117647,18,0,0.1380672
+"433","Wind or Weather or Stress","11000_15",0.011197,"Chihuahuan Mixed Desert and Thorn Scrub",60,0.478431373,1,0,0.011197
+"434","Wind or Weather or Stress","11040_23_24",0.0021884,"Mogollon Chaparral",27,0.82745098,2187,0.1,4.7860308
+"435","Wind or Weather or Stress","11090_15_25",0.0009802,"Sonoran Paloverde-Mixed Cacti Desert Scrub",22,0.960784314,7055,0.3,6.915311
+"436","Wind or Weather or Stress","11160_15_25",0.0057304,"Madrean Juniper Savanna",63,0.560784314,939,0,5.3808456
+"437","Wind or Weather or Stress","11160_24",0.0050234,"Madrean Juniper Savanna",46,0.560784314,4,0,0.0200936
+"438","Wind or Weather or Stress","11250_6_12_13_15_16_17_18_23_24_25_28",0.0053724,"Inter-Mountain Basins Big Sagebrush Steppe",31,0.874509804,180,0,0.967032
+"439","Wind or Weather or Stress","11270_15",0.1009868,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",5,0.843137255,72451,3.3,7316.5946468
+"440","Wind or Weather or Stress","11270_16_23_24_25",0.099726,"Inter-Mountain Basins Semi-Desert Shrub-Steppe",21,0.843137255,7269,0.3,724.908294
+"441","Wind or Weather or Stress","11350_15_28",0.021711,"Inter-Mountain Basins Semi-Desert Grassland",14,0.82745098,16463,0.8,357.428193
+"442","Wind or Weather or Stress","11350_16_23_24",0.0198358,"Inter-Mountain Basins Semi-Desert Grassland",24,0.82745098,3901,0.2,77.3794558
+"443","Wind or Weather or Stress","11530_16_23_24_25_27",0.0136052,"Inter-Mountain Basins Greasewood Flat",49,0.882352941,8,0,0.1088416
+"444","Wind or Weather or Stress","11550_15",0.0491372,"North American Warm Desert Riparian Systems",64,0.458823529,40,0,1.965488
+"445","Wind or Weather or Stress","11552_13_14_15",0.1196522,"North American Warm Desert Riparian Systems - Stringers",29,0.458823529,1642,0.1,196.4689124
+"446","Wind or Weather or Stress","11590_15",0.1506916,"Rocky Mountain Montane Riparian Systems",4,0.364705882,126933,5.8,19127.7368628
+"447","Wind or Weather or Stress","11590_16_23_24_26",0.3211198,"Rocky Mountain Montane Riparian Systems",50,0.364705882,589,0,189.1395622
+"448","Wind or Weather or Stress","11600_15_28",0.3151316,"Rocky Mountain Subalpine/Upper Montane Riparian Systems",65,0.654901961,584,0,184.0368544
