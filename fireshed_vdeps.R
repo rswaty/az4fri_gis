@@ -27,7 +27,8 @@ vect(shp)
 # plot the shape
 plot(shp)
 
-# read in attribute tables (I had LANDFIRE ones hand.  They do not come with downloaded tif files.  Firesheds came from .gdb posted by Kerry Metlen)
+# read in attribute tables (I had LANDFIRE ones hand.  Needed to add here as they do not come with downloaded tif files.  Firesheds came from .gdb posted by Kerry Metlen)
+
 bps_conus_atts <- read.csv("inputs/LF20_BPS_220.csv")
 scls2020_conus_atts <- read.csv("inputs/LF20_SCla_220.csv")
 scls2022_conus_atts <- read.csv("inputs/LF22_SCla_230.csv")
@@ -203,6 +204,10 @@ write.csv(scls2022_4fri_firesheds_atts, "outputs/sclas2022_4fri_firesheds.csv")
 
 # try to extract combined BpS/Slc raster that was downloaded ----
 
+shp <- st_read("inputs/firesheds.shp") %>% 
+  st_transform(crs = 5070) %>%
+  st_sf()
+
 bps_scl_fs_2020 <- terra::extract(bps_scl, shp, df = TRUE, ID = TRUE)   %>%
     group_by(ID, US_200BPS, US_200SCLASS) %>%
     summarize(count = n()) 
@@ -214,6 +219,7 @@ bps_scl_fs_2022 <- terra::extract(bps_scl, shp, df = TRUE, ID = TRUE)   %>%
 
 # wrangle BPS-SCLASS data for 2020 and 2022; merge together for charts ----
 
+## to report by fireshed need to groupby summarize by ID
 
 # 2020
 bps_scl_fs_2020_full <- bps_scl_fs_2020 %>%
@@ -223,10 +229,13 @@ bps_scl_fs_2020_full <- bps_scl_fs_2020 %>%
   left_join(bps_conus_atts %>%
               dplyr::select(VALUE, BPS_MODEL, BPS_NAME),
             by = c("US_200BPS" = "VALUE")) %>%
-  group_by(BPS_MODEL) %>%
+  group_by(ID, BPS_MODEL) %>%
   mutate(total_count = sum(count)) %>%
   mutate(currentPercent = as.integer((count/total_count)*100)) %>%
-  unite(model_label, c("BPS_MODEL", "LABEL"), remove = FALSE)
+  unite(model_label, c("BPS_MODEL", "LABEL"), remove = FALSE) %>%
+  rename(count2020 = count,
+         total_count2020 = total_count,
+         current_percent2020 = currentPercent)
 
 # 2022
 bps_scl_fs_2022_full <- bps_scl_fs_2022 %>%
@@ -239,6 +248,22 @@ bps_scl_fs_2022_full <- bps_scl_fs_2022 %>%
   group_by(BPS_MODEL) %>%
   mutate(total_count = sum(count)) %>%
   mutate(currentPercent = as.integer((count/total_count)*100)) %>%
-  unite(model_label, c("BPS_MODEL", "LABEL"), remove = FALSE)
+  unite(model_label, c("BPS_MODEL", "LABEL"), remove = FALSE) %>%
+  rename(count2022 = count,
+         total_count2022 = total_count,
+         current_percent2022 = currentPercent)
+
+# Clean 2022 for join
+bps_scl_fs_2022_sparse <- bps_scl_fs_2022_full %>%
+  select()
 
 
+## ALSO need to deal with ID before join Try using a second by statement with with "id"
+
+## make sure I have a table with all bps/firesheds/sclass combinations---start with refcon as base
+
+## with NA replace with zeros
+
+bps_scls_fs_full <-  
+  
+  full_join(bps_scl_fs_2020_full, bps_scl_fs_2022_full, by = "model_label") 
