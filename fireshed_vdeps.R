@@ -221,21 +221,29 @@ bps_scl_fs_2022 <- terra::extract(bps_scl, shp, df = TRUE, ID = TRUE)   %>%
 
 ## to report by fireshed need to groupby summarize by ID
 
+
+# need to get rid of US_BPS200; groupby BPS_MODEL
+
+#### START HERE NEXT SESSION -----
 # 2020
+
 bps_scl_fs_2020_full <- bps_scl_fs_2020 %>%
   left_join(scls2020_conus_atts %>% 
               dplyr::select(VALUE, LABEL), 
             by = c("US_200SCLASS" = "VALUE")) %>%
   left_join(bps_conus_atts %>%
-              dplyr::select(VALUE, BPS_MODEL, BPS_NAME),
+              dplyr::select(VALUE, BPS_MODEL),
             by = c("US_200BPS" = "VALUE")) %>%
+  unite(id_model_label, c("ID", "BPS_MODEL", "LABEL"), remove = FALSE) %>%
+  group_by(id_model_label, ID, LABEL, BPS_MODEL) %>%
+  summarize(count = sum(count), .groups = 'drop') %>%
   group_by(ID, BPS_MODEL) %>%
   mutate(total_count = sum(count)) %>%
-  mutate(currentPercent = as.integer((count/total_count)*100)) %>%
-  unite(model_label, c("BPS_MODEL", "LABEL"), remove = FALSE) %>%
+  mutate(currentPercent = as.integer((count/total_count)*100))%>%
   rename(count2020 = count,
          total_count2020 = total_count,
          current_percent2020 = currentPercent)
+
 
 # 2022
 bps_scl_fs_2022_full <- bps_scl_fs_2022 %>%
@@ -243,27 +251,70 @@ bps_scl_fs_2022_full <- bps_scl_fs_2022 %>%
               dplyr::select(VALUE, LABEL), 
             by = c("US_230SCLASS" = "VALUE")) %>%
   left_join(bps_conus_atts %>%
-              dplyr::select(VALUE, BPS_MODEL, BPS_NAME),
+              dplyr::select(VALUE, BPS_MODEL),
             by = c("US_200BPS" = "VALUE")) %>%
-  group_by(BPS_MODEL) %>%
+  unite(id_model_label, c("ID", "BPS_MODEL", "LABEL"), remove = FALSE) %>%
+  group_by(id_model_label, ID, LABEL, BPS_MODEL) %>%
+  summarize(count = sum(count), .groups = 'drop') %>%
+  group_by(ID, BPS_MODEL) %>%
   mutate(total_count = sum(count)) %>%
   mutate(currentPercent = as.integer((count/total_count)*100)) %>%
-  unite(model_label, c("BPS_MODEL", "LABEL"), remove = FALSE) %>%
   rename(count2022 = count,
          total_count2022 = total_count,
          current_percent2022 = currentPercent)
 
-# Clean 2022 for join
-bps_scl_fs_2022_sparse <- bps_scl_fs_2022_full %>%
-  select()
+## generate 'foundation' df for the full join--results is way too long with every bps-scl combo in every fs...will see what happens in join
+
+fs_bps_list <- bps_4fri_firesheds_atts$BPS_MODEL
+
+#subset ref_con to aoi
+aoi_ref_con <- subset(ref_con, model_code %in% fs_bps_list)
+
+# replicate aoi_ref_con, add "to_join" field
+
+full_aoi_ref_con <- do.call(rbind, replicate(28, aoi_ref_con, simplify =  FALSE))
+
+full_aoi_ref_con$ID <- rep(1:28, each = nrow(aoi_ref_con))
+
+full_aoi_ref_con <- full_aoi_ref_con %>%
+  unite(to_join, c("ID", "model_label"), remove = FALSE)
 
 
-## ALSO need to deal with ID before join Try using a second by statement with with "id"
+## set up 2020 and 2022 data for 
 
-## make sure I have a table with all bps/firesheds/sclass combinations---start with refcon as base
+to_join_2020_df <- bps_scl_fs_2020_full %>%
+  unite(to_join_2020, c("ID", "model_label"), remove = TRUE) %>%
+  dplyr::select(to_join_2020, count2020, total_count2020, current_percent2020, BPS_MODEL) %>%
+  ungroup() %>%
+  select(-BPS_MODEL)
 
-## with NA replace with zeros
 
-bps_scls_fs_full <-  
-  
-  full_join(bps_scl_fs_2020_full, bps_scl_fs_2022_full, by = "model_label") 
+to_join_2022_df <- bps_scl_fs_2022_full %>%
+  unite(to_join_2022, c("ID", "model_label"), remove = TRUE) %>%
+  dplyr::select(to_join_2022, count2022, total_count2022, current_percent2022, BPS_MODEL) %>%
+  ungroup() %>%
+  select(-BPS_MODEL)
+
+
+## try the join and clean up
+duplicates <- to_join_2020_df %>%
+  group_by(to_join_2020) %>%
+  filter(n() > 1)
+print(duplicates)
+
+
+
+
+
+
+# Perform full join between to_join_2020_df and full_aoi_ref_con
+joined_2020 <- left_join(full_aoi_ref_con, to_join_2020_df, by = c('to_join' = 'to_join_2020'))
+
+# Perform full join between to_join_2022_df and the result of the previous join
+final_joined_df <- full_join(joined_2020, to_join_2022_df, by = c('to_join_2020' = 'to_join_2022'))
+
+
+## write to explore in excel pivot
+
+write.csv (final_joined_df, file = "final_df.csv")
+
