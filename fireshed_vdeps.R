@@ -8,6 +8,7 @@
 
 # dependencies ----
 
+# load packages
 library(foreign)
 library(raster)
 library(rlandfire)
@@ -16,18 +17,18 @@ library(sf)
 library(terra)
 library(tidyverse)
 
-# shapefile of firesheds that intersect 4FRI
+## shapefile of firesheds that intersect 4FRI ----
 shp <- st_read("inputs/firesheds.shp") %>% 
   st_transform(crs = 5070) %>%
   st_union() %>%
   st_sf()
 
-# check the shape
+### check the shape ----
 vect(shp)
 # plot the shape
 plot(shp)
 
-# read in attribute tables (I had LANDFIRE ones hand.  Needed to add here as they do not come with downloaded tif files.  Firesheds came from .gdb posted by Kerry Metlen)
+## read in attribute tables (I had LANDFIRE ones hand.  Needed to add here as they do not come with downloaded tif files.  Firesheds came from .gdb posted by Kerry Metlen)
 
 bps_conus_atts <- read.csv("inputs/LF20_BPS_220.csv")
 scls2020_conus_atts <- read.csv("inputs/LF20_SCla_220.csv")
@@ -37,7 +38,7 @@ ref_con <- read_csv("inputs/ref_con_long.csv")
 
 
 
-## get LANDFIRE data: bps, 2020 scls and 2022 scls ----
+# get LANDFIRE data: bps, 2020 scls and 2022 scls ----
 
 # ran on October 3, 2024 then commented out
           # aoi <- getAOI(shp)
@@ -242,7 +243,9 @@ bps_scl_fs_2020_full <- bps_scl_fs_2020 %>%
   mutate(currentPercent = as.integer((count/total_count)*100))%>%
   rename(count2020 = count,
          total_count2020 = total_count,
-         current_percent2020 = currentPercent)
+         current_percent2020 = currentPercent) %>%
+  ungroup() %>%  
+  select(-c(ID, BPS_MODEL, LABEL))
 
 
 # 2022
@@ -261,7 +264,9 @@ bps_scl_fs_2022_full <- bps_scl_fs_2022 %>%
   mutate(currentPercent = as.integer((count/total_count)*100)) %>%
   rename(count2022 = count,
          total_count2022 = total_count,
-         current_percent2022 = currentPercent)
+         current_percent2022 = currentPercent) %>%
+  ungroup() %>%  
+  select(-c(ID, BPS_MODEL, LABEL))
 
 ## generate 'foundation' df for the full join--results is way too long with every bps-scl combo in every fs...will see what happens in join
 
@@ -280,41 +285,22 @@ full_aoi_ref_con <- full_aoi_ref_con %>%
   unite(to_join, c("ID", "model_label"), remove = FALSE)
 
 
-## set up 2020 and 2022 data for 
 
-to_join_2020_df <- bps_scl_fs_2020_full %>%
-  unite(to_join_2020, c("ID", "model_label"), remove = TRUE) %>%
-  dplyr::select(to_join_2020, count2020, total_count2020, current_percent2020, BPS_MODEL) %>%
-  ungroup() %>%
-  select(-BPS_MODEL)
+final_df <- full_aoi_ref_con |>
+  left_join(bps_scl_fs_2020_full, by = c("to_join" = "id_model_label"))
 
+final_df <- final_df |>
+  left_join(bps_scl_fs_2022_full, by = c("to_join" = "id_model_label"))
 
-to_join_2022_df <- bps_scl_fs_2022_full %>%
-  unite(to_join_2022, c("ID", "model_label"), remove = TRUE) %>%
-  dplyr::select(to_join_2022, count2022, total_count2022, current_percent2022, BPS_MODEL) %>%
-  ungroup() %>%
-  select(-BPS_MODEL)
+# try to remove groups that only have NA
 
-
-## try the join and clean up
-duplicates <- to_join_2020_df %>%
-  group_by(to_join_2020) %>%
-  filter(n() > 1)
-print(duplicates)
+final_df <- final_df |> 
+  group_by(model_code, ID) |>
+  filter(!all(is.na(total_count2020))) |>
+  mutate_all(funs(replace_na(.,0))) |>
+  mutate(change = current_percent2020 - current_percent2022,
+         sign_change = (change > 0),
+         bps_acres = round(max(total_count2020) * 0.222))
 
 
-
-
-
-
-# Perform full join between to_join_2020_df and full_aoi_ref_con
-joined_2020 <- left_join(full_aoi_ref_con, to_join_2020_df, by = c('to_join' = 'to_join_2020'))
-
-# Perform full join between to_join_2022_df and the result of the previous join
-final_joined_df <- full_join(joined_2020, to_join_2022_df, by = c('to_join_2020' = 'to_join_2022'))
-
-
-## write to explore in excel pivot
-
-write.csv (final_joined_df, file = "final_df.csv")
-
+write.csv(final_df, file = "final_df.csv")

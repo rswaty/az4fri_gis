@@ -1,0 +1,129 @@
+---
+title: "Report for Fireshed #`r params$ID` "
+author: "Randy Swaty"
+date: "2024-10-15"
+output: html_document
+params:
+  ID: "1"
+---
+
+
+
+```{r load packages, message=FALSE, warning=FALSE, include=FALSE}
+
+library(sf)
+library(tidyverse)
+library(scales)
+
+final_df <- read.csv("final_df.csv")
+
+shapefile <- st_read("inputs/firesheds.shp") %>% 
+  st_transform(crs = 5070) 
+
+shapefile$ID <- 1:nrow(shapefile)
+
+```
+
+
+## 
+```{r map, echo=FALSE, message=FALSE, warning=FALSE}
+
+# Filter the polygon you want to highlight
+highlighted_polygon <- shapefile %>% filter(ID == params$ID)
+
+# Create the map
+map <- ggplot() +
+  geom_sf(data = shapefile, fill = "lightgray", color = "black") +
+  geom_sf(data = highlighted_polygon, fill = "red", color = "black") +
+  theme_minimal()
+
+map
+```
+
+
+
+
+
+## Top Biophysical Settings
+
+
+```{r bps chart, message=FALSE, warning=FALSE, echo=FALSE, fig.width=10, fig.height=10}
+
+bps_data <- final_df |>
+  filter(ID == params$ID) |>
+  group_by(model_code, bps_name) |>
+  summarize(bps_acres = max(bps_acres)) |>
+  arrange(desc(bps_acres)) |>
+  ungroup() |>
+  top_n(n = 10, wt = bps_acres) 
+
+
+
+
+bps_chart <- 
+  ggplot(data = bps_data, aes(x = bps_name, y = bps_acres)) +
+  geom_bar(stat = "identity") +
+  labs(
+    subtitle = "Represents dominant vegetation systems pre-European colonization",
+    caption = "Data from landfire.gov.",
+    x = "",
+    y = "Acres") +
+  scale_x_discrete(limits = rev(bps_data$bps_name),
+                   labels = function(x) str_wrap(x, width = 18)) +
+  scale_y_continuous(labels = comma) +
+  coord_flip() +
+  theme_bw(base_size = 14)
+
+bps_chart
+
+```
+
+
+
+
+## Succession Class change, 2020 to 2022 for top 3 BpSs within the Fireshed
+
+```{r arrow chart, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=10}
+
+# get list of top three
+top_three <- bps_data[order(-bps_data$bps_acres), ][1:3, "model_code"]
+
+fireshed_data <- final_df |>
+  filter(ID == params$ID) 
+
+top3_bps <- fireshed_data[fireshed_data$model_code %in% top_three$model_code, ] |>
+  mutate(
+    diff_2020 = abs(`current_percent2020` - ref_percent),
+    diff_2022 = abs(`current_percent2022` - ref_percent),
+    closer_to_ref = diff_2020 > diff_2022
+  )
+
+
+arrow_plot <- top3_bps |> 
+  ggplot(aes(
+    x = current_percent2020, xend = current_percent2022, 
+    y = reorder(ref_label, desc(ref_label)),  yend = ref_label,
+    color = sign_change)) +
+  geom_segment(
+    arrow = arrow(angle = 30, length = unit(0.2, 'cm')),
+    size = 2) +
+  geom_point(aes(x = ref_percent, y = ref_label), shape = 19, size = 6, color = 'black') +
+  labs(
+    x = 'Percent Change', 
+    y = element_blank(),
+    title = 'Changes in Succession Class Percents, 2020 to 2022',
+    subtitle = 'Arrow beginning = % in 2020, End = % in 2022; Dot = Reference %'
+  ) +
+  scale_color_manual(
+    values = c("#fcba03", "#10692c")) +
+  theme_bw(base_size = 12) + 
+  theme(legend.position = "none") +
+  facet_wrap(~bps_name, ncol = 1 )
+
+
+arrow_plot
+
+
+
+```
+
