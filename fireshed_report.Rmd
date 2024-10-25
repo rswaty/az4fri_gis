@@ -34,7 +34,7 @@ highlighted_polygon <- shapefile %>% filter(ID == params$ID)
 # Create the map
 map <- ggplot() +
   geom_sf(data = shapefile, fill = "lightgray", color = "black") +
-  geom_sf(data = highlighted_polygon, fill = "red", color = "black") +
+  geom_sf(data = highlighted_polygon, fill = "blue", color = "black") +
   theme_minimal()
 
 map

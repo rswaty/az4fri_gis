@@ -225,7 +225,7 @@ bps_scl_fs_2022 <- terra::extract(bps_scl, shp, df = TRUE, ID = TRUE)   %>%
 
 # need to get rid of US_BPS200; groupby BPS_MODEL
 
-#### START HERE NEXT SESSION -----
+
 # 2020
 
 bps_scl_fs_2020_full <- bps_scl_fs_2020 %>%
@@ -235,17 +235,22 @@ bps_scl_fs_2020_full <- bps_scl_fs_2020 %>%
   left_join(bps_conus_atts %>%
               dplyr::select(VALUE, BPS_MODEL),
             by = c("US_200BPS" = "VALUE")) %>%
+  filter(!(LABEL %in% c('Barren or Sparse', 'Water'))) %>%
   unite(id_model_label, c("ID", "BPS_MODEL", "LABEL"), remove = FALSE) %>%
   group_by(id_model_label, ID, LABEL, BPS_MODEL) %>%
   summarize(count = sum(count), .groups = 'drop') %>%
   group_by(ID, BPS_MODEL) %>%
   mutate(total_count = sum(count)) %>%
-  mutate(currentPercent = as.integer((count/total_count)*100))%>%
+  mutate(currentPercent = as.integer((count/total_count)*100)) %>%
   rename(count2020 = count,
          total_count2020 = total_count,
          current_percent2020 = currentPercent) %>%
   ungroup() %>%  
-  select(-c(ID, BPS_MODEL, LABEL))
+  dplyr::select(-c(ID, BPS_MODEL, LABEL))
+
+
+write.csv(bps_scl_fs_2020, "bps_scl_fs_2020.csv")
+write.csv(bps_scl_fs_2020_full, "bps_scl_fs_2020_full.csv")
 
 
 # 2022
@@ -256,6 +261,7 @@ bps_scl_fs_2022_full <- bps_scl_fs_2022 %>%
   left_join(bps_conus_atts %>%
               dplyr::select(VALUE, BPS_MODEL),
             by = c("US_200BPS" = "VALUE")) %>%
+  filter(!(LABEL %in% c('Barren or Sparse', 'Water'))) %>%
   unite(id_model_label, c("ID", "BPS_MODEL", "LABEL"), remove = FALSE) %>%
   group_by(id_model_label, ID, LABEL, BPS_MODEL) %>%
   summarize(count = sum(count), .groups = 'drop') %>%
@@ -267,6 +273,8 @@ bps_scl_fs_2022_full <- bps_scl_fs_2022 %>%
          current_percent2022 = currentPercent) %>%
   ungroup() %>%  
   select(-c(ID, BPS_MODEL, LABEL))
+
+## ABOVE LOOKS OK-SOMETHING HAPPENS WITH THE SCLASS PERCENTS (AND COUNTS?) IN THE FINAL DF.  IT APPEARS TO BE WITH HOW PERCENTS ARE CALCULATED ----
 
 ## generate 'foundation' df for the full join--results is way too long with every bps-scl combo in every fs...will see what happens in join
 
@@ -282,7 +290,8 @@ full_aoi_ref_con <- do.call(rbind, replicate(28, aoi_ref_con, simplify =  FALSE)
 full_aoi_ref_con$ID <- rep(1:28, each = nrow(aoi_ref_con))
 
 full_aoi_ref_con <- full_aoi_ref_con %>%
-  unite(to_join, c("ID", "model_label"), remove = FALSE)
+  unite(to_join, c("ID", "model_label"), remove = FALSE) %>%
+  filter(ref_label != "Water")
 
 
 
@@ -292,7 +301,7 @@ final_df <- full_aoi_ref_con |>
 final_df <- final_df |>
   left_join(bps_scl_fs_2022_full, by = c("to_join" = "id_model_label"))
 
-# try to remove groups that only have NA
+# remove groups that only have NA
 
 final_df <- final_df |> 
   group_by(model_code, ID) |>
