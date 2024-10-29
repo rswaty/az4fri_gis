@@ -130,10 +130,10 @@ bps_chart
 
 # add s-class class:id to final_df
 
-# sclass_desc <- read.csv("inputs/scls_descriptions.csv")
+sclass_desc <- read.csv("inputs/scls_descriptions.csv")
 
-# final_df <- final_df |>
-  #left_join(sclass_desc, by = 'model_label')
+final_df <- final_df |>
+  left_join(sclass_desc, by = 'model_label')
   
 
 # get list of top three
@@ -155,54 +155,106 @@ top3_bps <- fireshed_data[fireshed_data$model_code %in% top_three$model_code, ] 
 
 write.csv(top3_bps, file = "top3_id7.csv")
 
-library(forcats)
-library(ggplot2)
 
-# Define the order of the levels with "E" between "D" and "UE"
+```
+
+```{r}
+
+
+# Define the correct order for the y-axis, from top to bottom
 levels_order <- c("A", "B", "C", "D", "E", "UE", "UN", "Agriculture", "Developed")
 
 # Convert ref_label to a factor with the specified levels
-top3_bps$ref_label <- factor(top3_bps$ref_label, levels = c("A", 
-                                                            "B", 
-                                                            "C", 
-                                                            "D", 
-                                                            "E", 
-                                                            "UE", 
-                                                            "UN", 
-                                                            "Agriculture", 
-                                                            "Developed"), ordered = T)
+top3_bps$ref_label <- factor(top3_bps$ref_label, levels = levels_order, ordered = TRUE)
 
-# Reverse the order of the y-axis
-arrow_plot <- top3_bps |> 
+# Create the plot and reverse the y-axis display
+arrow_plot <- top3_bps |>
   ggplot(aes(
-    x = current_percent2020, xend = current_percent2022, 
-    y = factor(ref_label, levels = rev(levels_order)), yend = factor(ref_label, levels = rev(levels_order)),
+    x = current_percent2020, 
+    xend = current_percent2022, 
+    y = ref_label, 
+    yend = ref_label, 
     color = closer_to_ref)) +
   geom_segment(
     data = subset(top3_bps, current_percent2020 != current_percent2022),
-    arrow = arrow(angle = 30, length = unit(0.2, 'cm')),
+    arrow = arrow(angle = 30, length = unit(0.2, "cm")),  # Corrected quotation mark
     size = 2) +
   geom_point(
     data = subset(top3_bps, current_percent2020 == current_percent2022),
-    aes(x = current_percent2020, y = factor(ref_label, levels = rev(levels_order))),
-    shape = 21, size = 4, color = 'grey', fill = 'white') +
+    aes(x = current_percent2020, y = ref_label),
+    shape = 21, size = 4, color = "grey", fill = "white") +
   geom_point(
-    aes(x = ref_percent, y = factor(ref_label, levels = rev(levels_order))),
-    shape = 22, size = 4, color = 'darkgrey', fill = 'darkgrey') +
+    aes(x = ref_percent, y = ref_label),
+    shape = 22, size = 4, color = "darkgrey", fill = "darkgrey") +
   labs(
-    x = 'Percent Change', 
-    y = element_blank(),
-    title = 'Changes in Succession Class Percents, 2020 to 2022',
-    subtitle = 'Arrow beginning = % in 2020, End = % in 2022; Square = Reference %, Circle = No Change'
+    x = "Percent Change", 
+    y = NULL,  # Remove y-axis label
+    title = "Changes in Succession Class Percents, 2020 to 2022",
+    subtitle = "Arrow beginning = % in 2020, End = % in 2022; Square = Reference %, Circle = No Change"
   ) +
-  scale_color_manual(
-    values = c("#10692c", "#fcba03")) +
+  scale_y_discrete(limits = rev(levels_order)) +  # Ensure correct top-to-bottom order
+  scale_color_manual(values = c("#10692c", "#fcba03")) +
   theme_bw(base_size = 12) + 
   theme(legend.position = "none") +
   facet_wrap(~bps_name, ncol = 1) 
 
 arrow_plot
 
+
+```
+
+```{r}
+
+
+# Define the correct order for the y-axis, from top to bottom
+levels_order <- c("A", "B", "C", "D", "E", "UE", "UN", "Agriculture", "Developed")
+
+# Replace NA values in class_id with the corresponding ref_label values
+top3_bps <- top3_bps %>%
+  mutate(class_id = ifelse(is.na(class_id), as.character(ref_label), class_id))
+
+# Ensure ref_label is a factor with the correct levels
+top3_bps$ref_label <- factor(top3_bps$ref_label, levels = levels_order, ordered = TRUE)
+
+# Create a named vector for labels by ensuring uniqueness
+y_labels <- unique(top3_bps[, c("ref_label", "class_id")])
+label_map <- setNames(y_labels$class_id, y_labels$ref_label)
+
+# Create the plot and reverse the y-axis display
+arrow_plot <- top3_bps |>
+  ggplot(aes(
+    x = current_percent2020, 
+    xend = current_percent2022, 
+    y = ref_label, 
+    yend = ref_label, 
+    color = closer_to_ref)) +
+  geom_segment(
+    data = subset(top3_bps, current_percent2020 != current_percent2022),
+    arrow = arrow(angle = 30, length = unit(0.2, "cm")),
+    size = 2) +
+  geom_point(
+    data = subset(top3_bps, current_percent2020 == current_percent2022),
+    aes(x = current_percent2020, y = ref_label),
+    shape = 21, size = 4, color = "grey", fill = "white") +
+  geom_point(
+    aes(x = ref_percent, y = ref_label),
+    shape = 22, size = 4, color = "darkgrey", fill = "darkgrey") +
+  labs(
+    x = "Percent Change", 
+    y = NULL,  # Remove y-axis label
+    title = "Changes in Succession Class Percents, 2020 to 2022",
+    subtitle = "Arrow beginning = % in 2020, End = % in 2022; Square = Reference %, Circle = No Change"
+  ) +
+  scale_y_discrete(
+    limits = rev(levels_order),  # Ensure correct top-to-bottom order
+    labels = label_map  # Use class_id for labels
+  ) +
+  scale_color_manual(values = c("#10692c", "#fcba03")) +
+  theme_bw(base_size = 12) + 
+  theme(legend.position = "none") +
+  facet_wrap(~bps_name, ncol = 1) 
+
+arrow_plot
 
 
 ```
