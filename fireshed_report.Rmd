@@ -1,12 +1,22 @@
 ---
-title: "Report for Fireshed #`r params$ID` "
+title: "LANDFIRE Powered Report for Fireshed #`r params$ID` "
 author: "Randy Swaty"
 date: "2024-10-15"
-output: html_document
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
 params:
   ID: "1"
 ---
 
+<style type="text/css">
+.main-container {
+  max-width: 100% !important;
+  margin: auto;
+}
+</style>
 
 
 ```{r load packages, message=FALSE, warning=FALSE, include=FALSE}
@@ -14,6 +24,7 @@ params:
 library(sf)
 library(tidyverse)
 library(scales)
+library(tmap)
 
 final_df <- read.csv("final_df.csv")
 
@@ -24,9 +35,13 @@ shapefile$ID <- 1:nrow(shapefile)
 
 ```
 
+<br>
 
-## 
-```{r map, echo=FALSE, message=FALSE, warning=FALSE}
+## Project Area for this report
+
+All project areas outlined; project area for this report highlighted in purple.
+
+```{r map, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE, out.width=10}
 
 # Filter the polygon you want to highlight
 highlighted_polygon <- shapefile %>% filter(ID == params$ID)
@@ -41,7 +56,34 @@ map
 ```
 
 
+```{r tmap, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
 
+
+# Filter the polygon you want to highlight
+highlighted_polygon <- shapefile %>% filter(ID == params$ID)
+
+# toggle tmap mode to interactive viewing
+tmap_mode("view")
+
+quickmap <-   tm_shape(shapefile) +
+  tm_borders("#282e2a",
+             lwd = 0.9) +
+  tm_fill(alpha = 0) +
+  tm_shape(highlighted_polygon) +
+  tm_borders("#282e2a",
+             lwd = 1.5)  +
+  tm_fill("#442b4f",
+          alpha = 0.7) +
+  tm_basemap('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}') 
+
+quickmap
+```
+
+<br>
+
+Fireshed Registry Project Area polygons from [Evers et al. (2024)](https://www.fs.usda.gov/rds/archive/catalog/RDS-2020-0054-3){target="blank"}
+
+<br>
 
 
 ## Top Biophysical Settings
