@@ -21,7 +21,7 @@ params:
 
 ```{r load packages, message=FALSE, warning=FALSE, include=FALSE}
 
-library(stringer)
+library(stringr)
 library(sf)
 library(tidyverse)
 library(scales)
@@ -91,38 +91,34 @@ Fireshed Registry Project Area polygons from [Evers et al. (2024)](https://www.f
 
 
 ```{r bps chart, message=FALSE, warning=FALSE, echo=FALSE, fig.width=10, fig.height=10}
-library(ggplot2)
-library(scales)
-library(stringr)
-library(dplyr)
 
 bps_data <- final_df |>
   filter(ID == params$ID) |>
-  group_by(model_code, bps_name) |>
+  group_by(model_code, bps_name) |>  
   summarize(bps_acres = max(bps_acres)) |>
   arrange(desc(bps_acres)) |>
   ungroup() |>
-  top_n(n = 10, wt = bps_acres) 
+  top_n(n = 5, wt = bps_acres) 
+
 
 bps_chart <- 
-  ggplot(data = bps_data, aes(x = reorder(bps_name, -bps_acres), y = bps_acres)) +
+  ggplot(data = bps_data, aes(x = bps_name, y = bps_acres)) +
   geom_bar(stat = "identity") +
   labs(
-    title = "Top 10 Biophysical Settings",
-    caption = "Data from landfire.gov",
+    subtitle = "Represents dominant vegetation systems pre-European colonization",
+    caption = "Data from landfire.gov.",
     x = "",
     y = "Acres") +
   scale_x_discrete(limits = rev(bps_data$bps_name),
                    labels = function(x) str_wrap(x, width = 18)) +
+  scale_y_continuous(labels = comma) +
   coord_flip() +
   theme_bw(base_size = 14)
-
 
 
 bps_chart
 
 ```
-
 
 
 
