@@ -1,0 +1,209 @@
+---
+title: "LANDFIRE Powered Report for Fireshed #`r params$ID` "
+author: "Randy Swaty"
+date: "2024-10-15"
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+params:
+  ID: "81"
+---
+
+<style type="text/css">
+.main-container {
+  max-width: 100% !important;
+  margin: auto;
+}
+</style>
+
+
+```{r load packages, message=FALSE, warning=FALSE, include=FALSE}
+
+library(forcats)
+library(sf)
+library(tidyverse)
+library(scales)
+library(tmap)
+
+final_df <- read.csv("pas_final_df.csv")
+
+shapefile <- st_read("inputs/LANDFIRE_AZ_4FRI_PAs.shp") %>% 
+  st_transform(crs = 5070) 
+
+shapefile$PA_ID <- 1:nrow(shapefile)
+
+```
+
+<br>
+
+## Project Area
+
+All project areas outlined; project area for this report highlighted in purple.
+
+```{r map, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE, out.width=10}
+
+# Filter the polygon you want to highlight
+highlighted_polygon <- shapefile %>% filter(PA_ID == params$ID)
+
+# Create the map
+map <- ggplot() +
+  geom_sf(data = shapefile, fill = "lightgray", color = "black") +
+  geom_sf(data = highlighted_polygon, fill = "blue", color = "black") +
+  theme_minimal()
+
+map
+```
+
+
+```{r tmap, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10}
+
+
+# Filter the polygon you want to highlight
+highlighted_polygon <- shapefile %>% filter(PA_ID == params$ID)
+
+# toggle tmap mode to interactive viewing
+tmap_mode("view")
+
+quickmap <-   tm_shape(shapefile) +
+  tm_borders("#282e2a",
+             lwd = 0.9) +
+  tm_fill(alpha = 0) +
+  tm_shape(highlighted_polygon) +
+  tm_borders("#282e2a",
+             lwd = 1.5)  +
+  tm_fill("#442b4f",
+          alpha = 0.7) +
+  tm_basemap('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}') 
+
+quickmap
+```
+
+<br>
+
+Fireshed Registry Project Area polygons from [Evers et al. (2024)](https://www.fs.usda.gov/rds/archive/catalog/RDS-2020-0054-3){target="blank"}
+
+<br>
+
+
+## Top Biophysical Settings
+
+
+```{r bps chart, message=FALSE, warning=FALSE, echo=FALSE, fig.width=10, fig.height=10}
+
+bps_data <- final_df |>
+  filter(ID == params$ID) |>
+  group_by(model_code, bps_name) |>
+  summarize(bps_acres = max(bps_acres)) |>
+  arrange(desc(bps_acres)) |>
+  ungroup() |>
+  top_n(n = 10, wt = bps_acres) 
+
+
+
+
+bps_chart <- 
+  ggplot(data = bps_data, aes(x = bps_name, y = bps_acres)) +
+  geom_bar(stat = "identity") +
+  labs(
+    subtitle = "Represents dominant vegetation systems pre-European colonization",
+    caption = "Data from landfire.gov.",
+    x = "",
+    y = "Acres") +
+  scale_x_discrete(limits = rev(bps_data$bps_name),
+                   labels = function(x) str_wrap(x, width = 18)) +
+  scale_y_continuous(labels = comma) +
+  coord_flip() +
+  theme_bw(base_size = 14)
+
+bps_chart
+
+```
+
+
+
+
+## Succession Class change, 2020 to 2022 for top 3 BpSs within the Fireshed
+
+```{r arrow chart, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=10}
+
+# add s-class class:id to final_df
+
+# sclass_desc <- read.csv("inputs/scls_descriptions.csv")
+
+# final_df <- final_df |>
+  #left_join(sclass_desc, by = 'model_label')
+  
+
+# get list of top three
+top_three <- bps_data[order(-bps_data$bps_acres), ][1:3, "model_code"]
+
+fireshed_data <- final_df |>
+  filter(ID == params$ID) 
+
+top3_bps <- fireshed_data[fireshed_data$model_code %in% top_three$model_code, ] |>
+  mutate(
+    diff_2020 = abs(current_percent2020 - ref_percent),
+    diff_2022 = abs(current_percent2022 - ref_percent),
+    closer_to_ref = case_when(
+      diff_2022 < diff_2020 ~ "TRUE",      # 2022 is closer to ref_percent than 2020
+      diff_2022 > diff_2020 ~ "FALSE",     # 2022 is farther from ref_percent than 2020
+      diff_2022 == diff_2020 ~ "NO_CHANGE" # 2022 is equally close to ref_percent as 2020
+    )
+  )
+
+write.csv(top3_bps, file = "top3_id7.csv")
+
+library(forcats)
+library(ggplot2)
+
+# Define the order of the levels with "E" between "D" and "UE"
+levels_order <- c("A", "B", "C", "D", "E", "UE", "UN", "Agriculture", "Developed")
+
+# Convert ref_label to a factor with the specified levels
+top3_bps$ref_label <- factor(top3_bps$ref_label, levels = c("A", 
+                                                            "B", 
+                                                            "C", 
+                                                            "D", 
+                                                            "E", 
+                                                            "UE", 
+                                                            "UN", 
+                                                            "Agriculture", 
+                                                            "Developed"), ordered = T)
+
+# Reverse the order of the y-axis
+arrow_plot <- top3_bps |> 
+  ggplot(aes(
+    x = current_percent2020, xend = current_percent2022, 
+    y = factor(ref_label, levels = rev(levels_order)), yend = factor(ref_label, levels = rev(levels_order)),
+    color = closer_to_ref)) +
+  geom_segment(
+    data = subset(top3_bps, current_percent2020 != current_percent2022),
+    arrow = arrow(angle = 30, length = unit(0.2, 'cm')),
+    size = 2) +
+  geom_point(
+    data = subset(top3_bps, current_percent2020 == current_percent2022),
+    aes(x = current_percent2020, y = factor(ref_label, levels = rev(levels_order))),
+    shape = 21, size = 4, color = 'grey', fill = 'white') +
+  geom_point(
+    aes(x = ref_percent, y = factor(ref_label, levels = rev(levels_order))),
+    shape = 22, size = 4, color = 'darkgrey', fill = 'darkgrey') +
+  labs(
+    x = 'Percent Change', 
+    y = element_blank(),
+    title = 'Changes in Succession Class Percents, 2020 to 2022',
+    subtitle = 'Arrow beginning = % in 2020, End = % in 2022; Square = Reference %, Circle = No Change'
+  ) +
+  scale_color_manual(
+    values = c("#10692c", "#fcba03")) +
+  theme_bw(base_size = 12) + 
+  theme(legend.position = "none") +
+  facet_wrap(~bps_name, ncol = 1) 
+
+arrow_plot
+
+
+
+```
+
