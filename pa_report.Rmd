@@ -21,7 +21,7 @@ params:
 
 ```{r load packages, message=FALSE, warning=FALSE, include=FALSE}
 
-library(forcats)
+library(stringer)
 library(sf)
 library(tidyverse)
 library(scales)
@@ -91,6 +91,10 @@ Fireshed Registry Project Area polygons from [Evers et al. (2024)](https://www.f
 
 
 ```{r bps chart, message=FALSE, warning=FALSE, echo=FALSE, fig.width=10, fig.height=10}
+library(ggplot2)
+library(scales)
+library(stringr)
+library(dplyr)
 
 bps_data <- final_df |>
   filter(ID == params$ID) |>
@@ -100,22 +104,20 @@ bps_data <- final_df |>
   ungroup() |>
   top_n(n = 10, wt = bps_acres) 
 
-
-
-
 bps_chart <- 
-  ggplot(data = bps_data, aes(x = bps_name, y = bps_acres)) +
+  ggplot(data = bps_data, aes(x = reorder(bps_name, -bps_acres), y = bps_acres)) +
   geom_bar(stat = "identity") +
   labs(
-    subtitle = "Represents dominant vegetation systems pre-European colonization",
-    caption = "Data from landfire.gov.",
+    title = "Top 10 Biophysical Settings",
+    caption = "Data from landfire.gov",
     x = "",
     y = "Acres") +
   scale_x_discrete(limits = rev(bps_data$bps_name),
                    labels = function(x) str_wrap(x, width = 18)) +
-  scale_y_continuous(labels = comma) +
   coord_flip() +
   theme_bw(base_size = 14)
+
+
 
 bps_chart
 
@@ -126,7 +128,7 @@ bps_chart
 
 ## Succession Class change, 2020 to 2022 for top 3 BpSs within the Fireshed
 
-```{r arrow chart, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=10}
+```{r message=FALSE, warning=FALSE}
 
 # add s-class class:id to final_df
 
@@ -153,57 +155,12 @@ top3_bps <- fireshed_data[fireshed_data$model_code %in% top_three$model_code, ] 
     )
   )
 
-write.csv(top3_bps, file = "top3_id7.csv")
 
 
 ```
 
-```{r}
 
-
-# Define the correct order for the y-axis, from top to bottom
-levels_order <- c("A", "B", "C", "D", "E", "UE", "UN", "Agriculture", "Developed")
-
-# Convert ref_label to a factor with the specified levels
-top3_bps$ref_label <- factor(top3_bps$ref_label, levels = levels_order, ordered = TRUE)
-
-# Create the plot and reverse the y-axis display
-arrow_plot <- top3_bps |>
-  ggplot(aes(
-    x = current_percent2020, 
-    xend = current_percent2022, 
-    y = ref_label, 
-    yend = ref_label, 
-    color = closer_to_ref)) +
-  geom_segment(
-    data = subset(top3_bps, current_percent2020 != current_percent2022),
-    arrow = arrow(angle = 30, length = unit(0.2, "cm")),  # Corrected quotation mark
-    size = 2) +
-  geom_point(
-    data = subset(top3_bps, current_percent2020 == current_percent2022),
-    aes(x = current_percent2020, y = ref_label),
-    shape = 21, size = 4, color = "grey", fill = "white") +
-  geom_point(
-    aes(x = ref_percent, y = ref_label),
-    shape = 22, size = 4, color = "darkgrey", fill = "darkgrey") +
-  labs(
-    x = "Percent Change", 
-    y = NULL,  # Remove y-axis label
-    title = "Changes in Succession Class Percents, 2020 to 2022",
-    subtitle = "Arrow beginning = % in 2020, End = % in 2022; Square = Reference %, Circle = No Change"
-  ) +
-  scale_y_discrete(limits = rev(levels_order)) +  # Ensure correct top-to-bottom order
-  scale_color_manual(values = c("#10692c", "#fcba03")) +
-  theme_bw(base_size = 12) + 
-  theme(legend.position = "none") +
-  facet_wrap(~bps_name, ncol = 1) 
-
-arrow_plot
-
-
-```
-
-```{r}
+```{r arrow chart, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=10}
 
 
 # Define the correct order for the y-axis, from top to bottom
@@ -230,15 +187,15 @@ arrow_plot <- top3_bps |>
     color = closer_to_ref)) +
   geom_segment(
     data = subset(top3_bps, current_percent2020 != current_percent2022),
-    arrow = arrow(angle = 30, length = unit(0.2, "cm")),
-    size = 2) +
+    arrow = arrow(angle = 30, length = unit(0.5, "cm")),
+    size = 3) +
   geom_point(
     data = subset(top3_bps, current_percent2020 == current_percent2022),
     aes(x = current_percent2020, y = ref_label),
-    shape = 21, size = 4, color = "grey", fill = "white") +
+    shape = 21, size = 4, color = "#323333", fill = "white") +
   geom_point(
     aes(x = ref_percent, y = ref_label),
-    shape = 22, size = 4, color = "darkgrey", fill = "darkgrey") +
+    shape = 22, size = 4, color = "#323333", fill = "#323333") +
   labs(
     x = "Percent Change", 
     y = NULL,  # Remove y-axis label
@@ -250,7 +207,7 @@ arrow_plot <- top3_bps |>
     labels = label_map  # Use class_id for labels
   ) +
   scale_color_manual(values = c("#10692c", "#fcba03")) +
-  theme_bw(base_size = 12) + 
+  theme_bw(base_size = 14) + 
   theme(legend.position = "none") +
   facet_wrap(~bps_name, ncol = 1) 
 
